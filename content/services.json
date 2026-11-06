@@ -2,51 +2,61 @@
   {
     "id": "daily-living",
     "title": "Daily living & life skills",
-    "description": "Build practical skills for everyday independence, including cooking, budgeting and daily routines."
+    "description": "Build practical skills for everyday independence, including cooking, budgeting and daily routines.",
+    "image": "community-care.jpg"
   },
   {
     "id": "plan-management",
     "title": "NDIS plan management",
-    "description": "Support with invoices, provider payments, budget tracking and financial reporting."
+    "description": "Support with invoices, provider payments, budget tracking and financial reporting.",
+    "image": "everyday-support.jpg"
   },
   {
     "id": "sil",
     "title": "Supported independent living",
-    "description": "Personalised assistance with everyday life in an independent or shared home."
+    "description": "Personalised assistance with everyday life in an independent or shared home.",
+    "image": "family-connection.jpg"
   },
   {
     "id": "household",
     "title": "Household tasks",
-    "description": "Practical help with cleaning, laundry, meal preparation and keeping your home comfortable."
+    "description": "Practical help with cleaning, laundry, meal preparation and keeping your home comfortable.",
+    "image": "community-care.jpg"
   },
   {
     "id": "transport",
     "title": "Travel & transport assistance",
-    "description": "Support to get to appointments, education, work and activities in your community."
+    "description": "Support to get to appointments, education, work and activities in your community.",
+    "image": "everyday-support.jpg"
   },
   {
     "id": "innovative-community",
     "title": "Innovative community participation",
-    "description": "Explore interests, develop skills and build confidence through meaningful activities."
+    "description": "Explore interests, develop skills and build confidence through meaningful activities.",
+    "image": "family-connection.jpg"
   },
   {
     "id": "personal-care",
     "title": "Daily personal activities",
-    "description": "Respectful support with personal routines, mobility, meals and everyday wellbeing."
+    "description": "Respectful support with personal routines, mobility, meals and everyday wellbeing.",
+    "image": "community-care.jpg"
   },
   {
     "id": "community",
     "title": "Community participation",
-    "description": "Stay connected through social, recreational, cultural and community activities."
+    "description": "Stay connected through social, recreational, cultural and community activities.",
+    "image": "everyday-support.jpg"
   },
   {
     "id": "coordination",
     "title": "Support coordination",
-    "description": "Help understanding your NDIS plan and connecting with suitable services and supports."
+    "description": "Help understanding your NDIS plan and connecting with suitable services and supports.",
+    "image": "family-connection.jpg"
   },
   {
     "id": "employment",
     "title": "Employment & higher education",
-    "description": "Practical support with job readiness, applications, study skills and workplace confidence."
+    "description": "Practical support with job readiness, applications, study skills and workplace confidence.",
+    "image": "community-care.jpg"
   }
 ]

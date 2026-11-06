@@ -71,3 +71,19 @@ Review `reviewRequired` in `content/site.json`: current availability and funding
 Rebuild and check locally. Upload the five root HTML pages and the `css/`, `js/` and `assets/` folders to the shared host’s public web directory, preserving paths. Use HTTPS. Do not upload configuration, templates, scripts, guidance files or Git metadata. Hosting needs no Python or Node.js. No remote deployment was performed.
 
 Use Git to review and commit source changes, including generated HTML after rebuilding. No remote is configured by this project.
+
+## Visual redesign
+
+The redesign adds layered hero photography, image-led service cards, photographic inner-page headers, a charcoal story section and a nature-backed contact CTA. Site image settings are in `content/site.json`, card images in `content/services.json`, and inner-page header images in `content/pages.json`. Editorial imagery and background placement are maintained in templates and layout CSS.
+
+Motion uses native CSS transitions and an IntersectionObserver: gentle one-time reveals, staggered card entrances, hover elevation, image zoom and moving button arrows. Keyboard focus remains visible; focused and anchor-target content is revealed. Reduced-motion settings remove entrance animation and interaction movement. No animation library, scroll handler or continuously looping effect is used.
+
+Additional illustrative Unsplash assets (not NOK Care staff, clients or facilities):
+
+- `family-connection.jpg`: https://images.unsplash.com/photo-1511632765486-a01980e01a18
+- `everyday-support.jpg`: https://images.unsplash.com/photo-1544027993-37dbfe43562a
+- `nature.jpg`: https://images.unsplash.com/photo-1441974231531-c6227db76b6e
+
+Downloaded at optimised display widths; all are served locally. Confirm image rights and suitability as part of the existing launch review. Additional image downloads total approximately 530 KB; below-fold content images are lazy-loaded. The nature image is a decorative CSS background.
+
+Redesign validation: rebuilt all five pages; static structure/link checks and JavaScript syntax checks passed. Browser automation was unavailable, so rendered layouts, hover motion and responsive interaction still need visual browser verification.
