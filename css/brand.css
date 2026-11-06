@@ -53,5 +53,7 @@
   --overlay: rgb(41 43 48 / 62%);
   --ease: cubic-bezier(.22, 1, .36, 1);
   --motion-fast: 240ms;
+  --motion-panel: 320ms;
+  --motion-page: 220ms;
   --motion-slow: 700ms;
 }

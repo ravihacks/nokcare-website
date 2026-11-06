@@ -150,3 +150,14 @@ All five pages now share a sticky, shrinking header, back-to-top control and NDI
 The automated accessibility harness now resets to the top before its audit: earlier form interactions leave controls partly clipped under the sticky header, producing viewport-dependent target-size reports. Scroll controls are checked separately.
 
 The full Chromium suite passed 454/454 checks across six widths (320–1440px), with no automated accessibility violations or runtime/asset errors. Evidence: `sticky-header-results.json`. Other browser engines were not rerun for this revision.
+
+
+## Motion consistency revision
+
+Added a short CSS page-entry fade with ordinary navigation, animated mobile navigation and native FAQ panels, and a fading/sliding back-to-top control. Durations and easing are centralised in brand tokens. Existing section reveals, button feedback and native smooth anchor scrolling remain. Reduced-motion preferences bypass animated panels and page-entry/scroll transitions. Browser history restores scroll-control state via `pageshow`.
+
+The full Chromium responsive suite passed 454/454 checks at six widths with no automated accessibility violations or runtime errors (`motion-responsive-results.json`). A separate animation-enabled regression script, `scripts/qa-motion.cjs`, checks rapid menu/FAQ clicks, keyboard closing, scrolling, focus restoration, page navigation and browser Back, sticky-header anchor clearance and reduced-motion scrolling in Chromium, Firefox and WebKit.
+
+Animation testing found that expanding the compact header before the smooth return scroll finishes can interrupt WebKit scrolling. The header now expands only at the top. The follow-up 90 Chromium scroll/footer assertions passed after this adjustment. A native snapshot-based cross-document fade was evaluated and replaced with the simpler page-entry fade after repeated history navigation exposed inconsistent rendering; no snapshot-navigation API is shipped.
+
+Final motion results: Chromium and Firefox completed the desktop/mobile animation suite; WebKit passed all 109 motion assertions after the header timing fix. All three engines passed normal link navigation, browser Back, rapid menu/FAQ interaction, keyboard FAQ closing, return-to-top focus, section target clearance and reduced-motion scrolling. The final WebKit rerun and Chromium follow-up cover the last header adjustment.

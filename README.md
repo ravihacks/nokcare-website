@@ -117,3 +117,11 @@ All five pages use `components/call-to-action.html` for the forest-backed closin
 The shared header sticks to the viewport and becomes compact after scrolling. `setupScrollControls()` in `js/components.js` manages the compact state, measured anchor offset and back-to-top button. Reduced-motion preferences are respected; activating the button restores focus to the home logo. Styling is in the component and responsive stylesheets.
 
 The shared footer uses the NDIS badge from the existing NOK Care website, displayed in the rightmost desktop column and stacked on mobile. Asset provenance is recorded in `content/image-sources.json`. Confirm its registered-provider wording and usage permission before customer launch, as recorded in `content/site.json`.
+
+## Motion and navigation
+
+Motion durations and easing live in `css/brand.css`. Buttons, focus treatments, section reveals, the mobile menu, FAQ answers and back-to-top control use short transitions. Section links and back-to-top use native smooth scrolling. Shared `css/global.css` applies a short page-entry fade while keeping ordinary page navigation. No click delays, routing framework or scroll interception is used. Reduced-motion preferences disable the page-entry fade, smooth scrolling and animated panels.
+
+Run `scripts/qa-motion.cjs` with the same `PLAYWRIGHT_MODULE_PATH` and `PLAYWRIGHT_BROWSERS_PATH` setup as the browser suite to check animation-enabled interactions in Chromium, Firefox and WebKit.
+
+Browser Back/Forward restores the saved viewport immediately; page-entry fades apply to ordinary link navigation. This avoids animating restored scroll positions.
