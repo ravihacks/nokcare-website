@@ -9,7 +9,7 @@ nav { display: flex; align-items: center; gap: 2rem; }
 nav > a { font-size: .9rem; font-weight: 600; text-decoration: none; padding-block: .5rem; }
 nav > a:not(.button) { border-bottom: 1px solid transparent; transition: border-color var(--motion-fast); }
 nav > a:not(.button):hover, nav > a[aria-current='page'] { border-bottom-color: var(--ink); }
-.menu-toggle { border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: var(--small-radius); min-height: 44px; padding: .5rem .85rem; }
+.menu-toggle { display: none; border: 1px solid var(--ink); background: transparent; color: var(--ink); border-radius: var(--small-radius); min-height: 44px; padding: .5rem .85rem; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.8rem; min-height: 54px; padding: .9rem 1.5rem; background: var(--gold); color: var(--ink); border: 1px solid var(--gold); border-radius: var(--small-radius); font-size: .9rem; font-weight: 500; text-decoration: none; cursor: pointer; transition: background var(--motion-fast), color var(--motion-fast), border-color var(--motion-fast), box-shadow var(--motion-fast), transform var(--motion-fast); }
 .button:not(:disabled):hover { background: var(--ink); color: var(--white); border-color: var(--ink); box-shadow: var(--shadow); transform: translateY(-2px); }
 .button:not(:disabled):active { transform: translateY(0); }

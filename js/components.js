@@ -9,7 +9,12 @@ export function setupNavigation() {
     button.setAttribute('aria-expanded', String(open));
     navigation.classList.toggle('is-open', open);
   });
-  navigation.addEventListener('keydown', event => { if (event.key === 'Escape') { closeMenu(); button.focus(); } });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      button.focus();
+    }
+  });
   navigation.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
   window.matchMedia('(min-width: 1000px)').addEventListener('change', closeMenu);
 }

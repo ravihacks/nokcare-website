@@ -29,7 +29,10 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
     event.target.closest('.is-pending')?.classList.remove('is-pending');
   });
   window.addEventListener('hashchange', () => {
-    const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    let fragment;
+    try { fragment = decodeURIComponent(location.hash.slice(1)); }
+    catch { return; } // Ignore malformed URL fragments without interrupting the page.
+    const target = document.getElementById(fragment);
     target?.classList.remove('is-pending');
     target?.closest('.is-pending')?.classList.remove('is-pending');
   });

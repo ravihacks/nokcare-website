@@ -44,7 +44,7 @@ python3 -m http.server 8000
 
 Visit `http://localhost:8000`. Stop with Ctrl-C. Static checks validate links, fragments, unique IDs, page landmarks, H1 counts, image dimensions/alt attributes, field labels and placeholder resolution. They do not certify WCAG conformance.
 
-Before launch, manually test all five pages at 375px, 768px and 1440px, keyboard focus and menu Escape behavior, FAQ expansion, browser zoom to 200%, reduced motion and browser console errors. Browser automation was unavailable in the implementation session; visual responsiveness and interactive behavior still require browser QA.
+Handover QA has now run in Chromium, Firefox and WebKit at six widths from 320px to 1440px: 1,116 checks passed, with no automated accessibility violations. See [the QA report](qa/HANDOVER_QA.md) for evidence, corrected defects, reproduction steps and outstanding acceptance items. Real-device, installed-browser, screen-reader and actual browser-zoom testing remain customer acceptance tasks.
 
 ## Contact and referrals
 
@@ -70,7 +70,7 @@ Review `reviewRequired` in `content/site.json`: current availability and funding
 
 Rebuild and check locally. Upload the five root HTML pages and the `css/`, `js/` and `assets/` folders to the shared host’s public web directory, preserving paths. Use HTTPS. Do not upload configuration, templates, scripts, guidance files or Git metadata. Hosting needs no Python or Node.js. No remote deployment was performed.
 
-Use Git to review and commit source changes, including generated HTML after rebuilding. No remote is configured by this project.
+Use Git to review and commit source changes, including generated HTML after rebuilding. The GitHub remote is `https://github.com/ravihacks/nokcare-website`. It remains private; GitHub Pages is not enabled pending the hosting/visibility decision.
 
 ## Current visual direction
 
@@ -84,4 +84,4 @@ Edit the homepage composition in `templates/index.html` and the other page templ
 
 Photography is illustrative, not presented as NOK Care staff, clients or facilities. The main photo is reused from the existing NOK Care website. The editorial homepage photo is https://images.unsplash.com/photo-1511632765486-a01980e01a18 (`family-connection.jpg`). Previously downloaded but undisplayed assets are `everyday-support.jpg` (https://images.unsplash.com/photo-1544027993-37dbfe43562a) and `nature.jpg` (https://images.unsplash.com/photo-1441974231531-c6227db76b6e). Confirm permissions before launch.
 
-Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Browser automation is unavailable in this session; visual layout, responsive behavior and interaction still require browser QA. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.
+Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Handover QA additionally passed 1,116 checks in Chromium, Firefox and WebKit; see `qa/HANDOVER_QA.md`. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.
