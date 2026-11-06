@@ -1,0 +1,23 @@
+{
+  "about": {
+    "description": "Talk to us about the support you are looking for. We can discuss your needs, preferences and available services.",
+    "label": "Discuss your support",
+    "target": "contact.html"
+  },
+  "services": {
+    "description": "Looking for aged care? Talk to us about help at home and staying connected. We\u2019ll discuss suitable services, availability and funding for your circumstances.",
+    "label": "Discuss your support",
+    "target": "contact.html",
+    "id": "aged-care"
+  },
+  "contact": {
+    "description": "Call or email the team to discuss support, availability and the next step. Please arrange a secure channel before sharing personal documents.",
+    "label": "Email the team",
+    "target": "email"
+  },
+  "referral": {
+    "description": "Call to ask about service availability and how to proceed. Participant details and documents should be shared through an agreed secure channel.",
+    "label": "Discuss a referral",
+    "target": "phone"
+  }
+}

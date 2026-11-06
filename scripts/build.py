@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 site = json.loads((ROOT / 'content/site.json').read_text())
 services = json.loads((ROOT / 'content/services.json').read_text())
 pages = json.loads((ROOT / 'content/pages.json').read_text())
+call_to_actions = json.loads((ROOT / 'content/call-to-actions.json').read_text())
 
 def render(text, values):
     rendered = re.sub(r'\{\{(\w+)\}\}', lambda match: str(values[match[1]]), text)
@@ -35,7 +36,7 @@ values['areas'] = '<div class="pills">' + ''.join('<span class="pill">' + escape
 service_lookup = {item['id']: item for item in services}
 groups = json.loads((ROOT / 'content/service-groups.json').read_text())
 values['all_services'] = ''.join(
-    '<section class="service-group" id="' + escape(group['id']) + '"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div><div class="service-group-content">' + service_cards([service_lookup[key] for key in group['services']], True) + '<a class="text-link service-group-discuss" href="contact.html" aria-label="Discuss these services: ' + escape(group['title']) + '">Discuss these services</a></div></section>'
+    '<section class="service-group" id="' + escape(group['id']) + '"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div><div class="service-group-content">' + service_cards([service_lookup[key] for key in group['services']], True) + '</div></section>'
     for group in groups)
 form_settings = json.loads((ROOT / 'content/forms.json').read_text())
 if form_settings['mode'] != 'preview' or form_settings['endpoint'] is not None or form_settings['participantDataEnabled']:
@@ -67,6 +68,15 @@ for page in pages:
     if key == 'referral':
         header = header.replace('class="button button-small" href="referral.html"','class="button button-small" href="referral.html" aria-current="page"')
     footer = render((ROOT/'components/footer.html').read_text(),current)
+    if key in call_to_actions:
+        config = call_to_actions[key]
+        target = config['target']
+        if target == 'phone':
+            target = 'tel:' + values['phone_link']
+        elif target == 'email':
+            target = 'mailto:' + site['email']
+        cta_values = dict(current, cta_description=escape(config['description']), cta_label=escape(config['label']), cta_target=escape(target), cta_section_id=(' id="' + escape(config['id']) + '"') if config.get('id') else '')
+        current['closing_cta'] = render((ROOT / 'components/call-to-action.html').read_text(), cta_values)
     body = render((ROOT/f'templates/{key}.html').read_text(),current)
     document = f'''<!doctype html>
 <html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(page['title'])}</title><meta name="description" content="{escape(page['description'])}"><meta name="theme-color" content="#F8F5EF"><meta property="og:title" content="{escape(page['title'])}"><meta property="og:description" content="{escape(page['description'])}"><meta property="og:type" content="website"><link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">{styles}<script type="module" src="js/main.js"></script></head><body class="page-{key}">{header}<main id="main" tabindex="-1">{body}</main>{footer}</body></html>'''
