@@ -5,7 +5,7 @@ setupNavigation();
 // Progressive enhancement: content remains readable if observers are unsupported.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 if (!motionPreference.matches && 'IntersectionObserver' in window) {
-  const elements = document.querySelectorAll('.support-pathway, .section-heading, .step, .editorial-row > div, .perspective-grid > *, .introduction-grid > *, .local-grid > div, .section .split > div, .cta');
+  const elements = document.querySelectorAll('.support-pathway, .section-heading, .step, .editorial-row > div, .perspective-grid > *, .introduction-grid > *, .local-grid > div, .local-feature > *, .getting-started-grid > *, .section .split > div, .cta');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

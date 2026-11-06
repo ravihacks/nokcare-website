@@ -31,7 +31,7 @@ WebKit keyboard traversal uses Option+Tab to include links, consistent with macO
 
 | Review finding | Current change |
 | --- | --- |
-| Hero and introduction repeat the same photo. | Introduction uses the existing alternative illustrative photo; the repeated photo-led approach section is removed. Actual NOK Care team photography still requires approved assets. |
+| Hero and introduction repeat the same photo. | Introduction uses an alternative illustrative photo; separate photographs accompany service pathways, getting-started guidance and local support. Actual NOK Care team photography still requires approved assets. |
 | Aged care and disability visitors have one generic route. | Separate aged care and disability/NDIS links lead to relevant service-page sections. Availability/funding are explicitly confirmed with the team. |
 | Mobile service preamble precedes its heading. | Main heading appears first, followed by pathways and featured services; “View all services” follows the list. |
 | Only service arrows are linked; wording is technical. | Each row has a single link encompassing its title, description and arrow. “Personal care” is a display label; its published category is retained in the content file. |
@@ -40,7 +40,7 @@ WebKit keyboard traversal uses Option+Tab to include links, consistent with macO
 | Closing button wraps on mobile. | Shared label is “Talk to our team”; actual mobile layout confirms a single line. |
 | Contact leads to a disabled preview form. | Preview is removed. Direct phone/email links and a short enquiry-preparation guide form the contact experience. Sensitive information must be arranged through a suitable secure channel. |
 
-At 375px the homepage is **6,605px tall**, compared with 7,046px at the review: 441px shorter while adding distinct pathways and larger key text. Desktop length is 4,997px compared with 5,298px. Measurements are viewport/font specific, not a universal scroll-length target.
+Current image-led homepage height is **7,447px at 375px width** and **5,691px at 1440px width**. Added photographs increase scroll length intentionally. Image dimensions and responsive crop heights are reserved in the layout; no horizontal overflow occurred. Measurements are viewport/font specific.
 
 Actual click checks in `ux-journeys.json` verify both pathways, a Personal care title through to its service, and the service enquiry link through to phone/email contact. The contact button's mobile line length was also verified.
 
@@ -91,3 +91,9 @@ node scripts/qa-browser.cjs
 ```
 
 The runner exits nonzero for failures or an incomplete run. `QA_BASE_URL` can target a hosted subdirectory without a trailing slash. Stop the local server after testing. Deploy only the five HTML pages and the CSS, JS and asset folders; source guidance, QA tooling and Git metadata are not production assets.
+
+## Image-led visual revision
+
+Added two photographic support pathways, a group-discussion image beside the getting-started guidance, and a Melbourne/Yarra River photo beside the service areas. Images stack on mobile; pathway photo clicks reach the existing service destinations at both 375px and 1440px. Image crops were reviewed at those widths. Text and service routing remain intact. The full three-engine suite passed again: 396 checks per engine, 1,188 total, with no automated accessibility violations.
+
+The four optimised JPEGs add approximately 657KB in total and load lazily below the hero. Sources and intended illustrative usage are in `content/image-sources.json`. The photographs do not imply staff/client identities or an office address. Image suitability and rights remain part of customer acceptance.

@@ -1,0 +1,26 @@
+{
+  "review": "Confirm image rights and suitability before customer launch. Photos are locally hosted and lazy-loaded below the hero.",
+  "images": [
+    {
+      "file": "aged-care-companionship.jpg",
+      "url": "https://images.unsplash.com/photo-1713566583811-4d7ac19f8491",
+      "use": "Aged care pathway; illustrative older couple, not NOK Care clients"
+    },
+    {
+      "file": "community-connections.jpg",
+      "url": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac",
+      "use": "Disability/NDIS pathway; illustrative social connection, no claim about disability or client status"
+    },
+    {
+      "file": "planning-together.jpg",
+      "url": "https://images.unsplash.com/photo-1690191886622-fd8d6cda73bd",
+      "existingSource": "https://nokcare.com.au/services",
+      "use": "Getting started; illustrative group conversation, not NOK Care staff"
+    },
+    {
+      "file": "melbourne-river.jpg",
+      "url": "https://images.unsplash.com/photo-1610183880843-52fc754207a8",
+      "use": "Service areas; Melbourne/Yarra River image, not an office location"
+    }
+  ]
+}
