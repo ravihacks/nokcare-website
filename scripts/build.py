@@ -21,9 +21,11 @@ def service_cards(items, on_services=False):
         target = 'contact.html' if on_services else 'services.html#' + item['id']
         label = 'Ask about this service' if on_services else 'Read about this service'
         title = escape(item.get('displayTitle', item['title']))
-        rows.append(f'<article class="service-card" id="{escape(item["id"])}"><span class="number" aria-hidden="true">{number:02d}</span><a class="service-card-link" href="{target}" aria-label="{label}: {title}"><div class="service-copy"><h3>{title}</h3><p>{escape(item["description"])}</p></div><span class="service-card-action"><span class="service-link-label">{label}</span><span class="service-arrow" aria-hidden="true">↗</span></span></a></article>')
+        number_label = '' if on_services else f'<span class="number" aria-hidden="true">{number:02d}</span>'
+        rows.append(f'<article class="service-card" id="{escape(item["id"])}">{number_label}<a class="service-card-link" href="{target}" aria-label="{label}: {title}"><div class="service-copy"><h3>{title}</h3><p>{escape(item["description"])}</p></div><span class="service-card-action"><span class="service-link-label">{label}</span><span class="service-arrow" aria-hidden="true">↗</span></span></a></article>')
 
-    return '<div class="service-grid">' + ''.join(rows) + '</div>'
+    grid_class = 'service-grid service-grid--plain' if on_services else 'service-grid'
+    return '<div class="' + grid_class + '">' + ''.join(rows) + '</div>'
 
 values = {key: escape(str(site[key])) for key in ['name', 'email', 'address']}
 values.update(phone=escape(site['phones'][0]), second_phone=escape(site['phones'][1]), phone_link=site['phones'][0].replace(' ', ''), second_phone_link=site['phones'][1].replace(' ', ''), year=date.today().year)

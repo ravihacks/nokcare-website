@@ -2,7 +2,7 @@
 
 Review date: 6 November 2026 (Australia/Brisbane).
 
-**Current result: 1,362 checks passed across Chromium, Firefox and WebKit.** No automated accessibility violations were found across 30 page/viewport audits. The five pages are ready for customer review. Production acceptance remains conditional on business approvals, the final hosting check and real-device/user acceptance.
+**Full cross-browser baseline: 1,362 checks passed across Chromium, Firefox and WebKit.** No automated accessibility violations were found across 30 page/viewport audits. The five pages are ready for customer review. Production acceptance remains conditional on business approvals, the final hosting check and real-device/user acceptance.
 
 ## Browser evidence
 
@@ -118,3 +118,9 @@ Applied the approved audit to About, Services, Contact and Referral only. Homepa
 At 375px, page lengths changed from About 4,896 → 4,524px; Services 8,291 → 6,190px; Contact 5,445 → 4,647px; Referral 7,218 → 4,815px. These are viewport/font-specific observations, not general performance guarantees. Desktop and mobile opening/full-page captures were visually reviewed.
 
 The full Chromium/Firefox/WebKit suite passed again: 454 checks per engine, 1,362 total, with no automated accessibility violations or runtime/asset/request errors. The new sidebar content uses ordinary containers as part of the main task, resolving an accessibility landmark issue found in the first audit run. Additional category navigation, form ordering, referral-action and page-height observations are in `inner-page-flows.json`. Current full-page evidence remains in `screenshots/inner-*.png`.
+
+## Services list and closing-panel cleanup
+
+Combined the aged-care guidance and general closing CTA into one photographic panel. The `#aged-care` destination is preserved on that section, alongside the phone link and contact action. Removed decorative numbering, per-row divider lines and list-top rules from the Services directory; a single subtle rule separates the service groups. The homepage service component retains its previous styling and numbering.
+
+Scoped Chromium checks passed at 320px, 375px, 768px and 1440px: all ten linked services, no decorative numbers/row/list borders, one closing panel, resolving aged-care fragments, no horizontal scrolling, no asset/runtime errors and no automated accessibility violations. Image-backed contrast remains a manual-review item; desktop/mobile panel and directory captures were visually reviewed. Evidence: `services-cleanup.json`; current Services screenshots are refreshed. This was a scoped check after the full cross-browser baseline, not a rerun of all 1,362 checks. Homepage HTML remains byte-identical.
