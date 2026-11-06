@@ -26,8 +26,11 @@ Do not use gold for long paragraphs.
 
 ## Typography
 
-Primary font: Montserrat
+Headings: Plus Jakarta Sans, semibold and bold
+Body and controls: Poppins, regular and medium
 Fallback: Arial, sans-serif
+
+Typography revised following the requested Enable Hub and Careneeds reference review. Fonts are self-hosted.
 
 Headings:
 - Bold or semibold

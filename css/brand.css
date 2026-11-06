@@ -1,14 +1,28 @@
 @font-face {
-  font-family: Montserrat;
-  src: url('../assets/fonts/montserrat-regular.ttf') format('truetype');
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/jakarta-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/jakarta-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url('../assets/fonts/poppins-regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: Montserrat;
-  src: url('../assets/fonts/montserrat-semibold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: Poppins;
+  src: url('../assets/fonts/poppins-medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -21,11 +35,15 @@
   --line: #dedbd3;
   --pale: #eee7d3;
   --dark-gold: #775c00;
-  --font: Montserrat, Arial, sans-serif;
-  --radius: 4px;
-  --small-radius: 3px;
-  --space: clamp(4rem, 8vw, 7.5rem);
+  --font: Poppins, Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', Arial, sans-serif;
+  --radius: 18px;
+  --small-radius: 8px;
+  --space: clamp(3.75rem, 7vw, 6.25rem);
   --width: 1200px;
+  --shadow: 0 18px 50px rgb(41 43 48 / 9%);
+  --gold-soft: rgb(205 159 3 / 12%);
+  --text-large: clamp(1.1rem, 1.4vw, 1.2rem);
   --overlay: rgb(41 43 48 / 62%);
   --ease: cubic-bezier(.22, 1, .36, 1);
   --motion-fast: 240ms;
