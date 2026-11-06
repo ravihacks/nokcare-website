@@ -40,7 +40,7 @@ nav > a:not(.button):hover, nav > a[aria-current='page'] { border-bottom-color: 
 .faq summary::after { content: '+'; position: absolute; right: 0; top: -.3rem; font-size: 1.3rem; font-weight: 400; }
 .faq details[open] summary::after { content: '−'; }
 .faq details p { font-size: .95rem; color: var(--muted); margin: 1rem 0 0; }
-.cta { display: grid; gap: 2rem; padding: clamp(2rem, 5vw, 4rem); background: var(--ink); color: var(--white); border-radius: var(--radius); }
+.cta { display: grid; gap: 2rem; padding: clamp(2rem, 5vw, 4rem); background: linear-gradient(100deg, var(--cta-scrim-strong) 25%, var(--cta-scrim-soft)), url('../assets/images/nature.jpg') center 55% / cover, var(--ink); color: var(--white); border-radius: var(--radius); }
 .cta .eyebrow { color: var(--gold); }
 .cta .button:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
 .cta a:focus-visible { outline-color: var(--gold); }

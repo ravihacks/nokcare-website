@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "file": "index",
+      "width": 375,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(rgba(41, 43, 48, 0.92), rgba(41, 43, 48, 0.92)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\")"
+    },
+    {
+      "file": "about",
+      "width": 375,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(rgba(41, 43, 48, 0.92), rgba(41, 43, 48, 0.92)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\")"
+    },
+    {
+      "file": "services",
+      "width": 375,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(rgba(41, 43, 48, 0.92), rgba(41, 43, 48, 0.92)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\")"
+    },
+    {
+      "file": "referral",
+      "width": 375,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(rgba(41, 43, 48, 0.92), rgba(41, 43, 48, 0.92)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\")"
+    },
+    {
+      "file": "index",
+      "width": 768,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "about",
+      "width": 768,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "services",
+      "width": 768,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "referral",
+      "width": 768,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "index",
+      "width": 1440,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "about",
+      "width": 1440,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "services",
+      "width": 1440,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    },
+    {
+      "file": "referral",
+      "width": 1440,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ],
+      "overflow": false,
+      "background": "linear-gradient(100deg, rgba(41, 43, 48, 0.92) 25%, rgba(41, 43, 48, 0.8)), url(\"http://127.0.0.1:8765/assets/images/nature.jpg\"), none"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

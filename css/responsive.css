@@ -39,6 +39,7 @@
   .home-services .editorial-row > div:first-child .text-link { margin-bottom: 1rem; }
 }
 @media (max-width: 699px) {
+  .cta { background-image: linear-gradient(var(--cta-scrim-strong), var(--cta-scrim-strong)), url('../assets/images/nature.jpg'); }
   .service-link-label { display: none; }
   .service-card { grid-template-columns: 24px minmax(0, 1fr) 44px; gap: .65rem; }
   .service-card h3 { font-size: 1.05rem; }

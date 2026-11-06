@@ -44,6 +44,8 @@
   --shadow: 0 18px 50px rgb(41 43 48 / 9%);
   --gold-soft: rgb(205 159 3 / 12%);
   --text-large: clamp(1.1rem, 1.4vw, 1.2rem);
+  --cta-scrim-strong: rgb(41 43 48 / 92%);
+  --cta-scrim-soft: rgb(41 43 48 / 80%);
   --hero-scrim-strong: rgb(41 43 48 / 94%);
   --hero-scrim-mid: rgb(41 43 48 / 85%);
   --hero-scrim-light: rgb(41 43 48 / 25%);
