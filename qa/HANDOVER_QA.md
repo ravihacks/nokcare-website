@@ -142,3 +142,11 @@ Scoped Chromium checks passed for all four pages at 320px, 375px, 768px and 1440
 At the user’s subsequent request, the homepage now uses the same shared detailed closing panel as the inner pages, with a short support description, phone number and “Discuss your support” contact button. Previous homepage-preservation checks above apply to the earlier revisions, before this explicit homepage change. All five closing panels now use `components/call-to-action.html` and `content/call-to-actions.json`.
 
 Scoped Chromium checks passed at 320px, 375px, 768px and 1440px: one shared panel, correct contact destination and phone number, no overflow or runtime/asset errors and no automated accessibility violations. Mobile/desktop panel captures were reviewed; image-backed contrast remains a manual-review item. Evidence: `home-shared-cta.json` and `screenshots/home-shared-cta-*.png`. This was a targeted check, not a full cross-browser rerun.
+
+## Sticky navigation and footer revision
+
+All five pages now share a sticky, shrinking header, back-to-top control and NDIS badge. Targeted Chromium checks passed 90 assertions across 375px, 768px and 1440px: fixed header position, reduced header height, visible return control, return to page top, focus restoration, loaded footer image and no horizontal overflow. Desktop footer rendering was visually reviewed. The existing website badge retains registered-provider wording; confirmation is tracked in site configuration before launch.
+
+The automated accessibility harness now resets to the top before its audit: earlier form interactions leave controls partly clipped under the sticky header, producing viewport-dependent target-size reports. Scroll controls are checked separately.
+
+The full Chromium suite passed 454/454 checks across six widths (320–1440px), with no automated accessibility violations or runtime/asset errors. Evidence: `sticky-header-results.json`. Other browser engines were not rerun for this revision.

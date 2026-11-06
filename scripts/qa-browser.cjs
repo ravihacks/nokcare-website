@@ -94,6 +94,9 @@ fs.mkdirSync(output, { recursive: true });
           if (file === 'referral.html') check(`${label}: no participant records requested`, await form.locator('textarea, input[type="file"], input[name*="participant"], input[name*="ndis"]').count() === 0);
         }
         if (axePath && [375, 1440].includes(width)) {
+          // Audit from a stable viewport: prior form checks scroll individual controls.
+          await page.evaluate(() => { document.activeElement?.blur(); scrollTo(0, 0); });
+          await page.waitForTimeout(100);
           await page.addScriptTag({ path: axePath });
           const audit = await page.evaluate(async () => {
             const r = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa', 'best-practice'] } });

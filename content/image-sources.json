@@ -21,6 +21,12 @@
       "file": "melbourne-river.jpg",
       "url": "https://images.unsplash.com/photo-1610183880843-52fc754207a8",
       "use": "Service areas; Melbourne/Yarra River image, not an office location"
+    },
+    {
+      "file": "ndis-provider-logo.png",
+      "url": "https://assets.zyrosite.com/cdn-cgi/image/format=png,w=768,fit=crop/Yyv36o76aDiagr89/ndis-provider-logo-CVKXldZlnb7knonR.png",
+      "existingSource": "https://nokcare.com.au/",
+      "use": "Existing provider badge; confirm current registration and logo permission before launch."
     }
   ]
 }

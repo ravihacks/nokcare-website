@@ -111,3 +111,9 @@ Use `heroLayout: "editorial"` or `"compact"` in `content/pages.json`. The builde
 ## Shared closing contact panel
 
 All five pages use `components/call-to-action.html` for the forest-backed closing panel shown on Services. Text, button labels and destinations are in `content/call-to-actions.json`; the builder resolves configured `phone`/`email` targets from `site.json`. Home, About and Services link to Contact, Contact opens the general email address, and Referral keeps a telephone action. Services retains `#aged-care` on this shared closing section. There are no additional enquiry links beneath the service groups. The homepage uses this same detailed panel, with its own supporting text.
+
+## Sticky header and footer badge
+
+The shared header sticks to the viewport and becomes compact after scrolling. `setupScrollControls()` in `js/components.js` manages the compact state, measured anchor offset and back-to-top button. Reduced-motion preferences are respected; activating the button restores focus to the home logo. Styling is in the component and responsive stylesheets.
+
+The shared footer uses the NDIS badge from the existing NOK Care website, displayed in the rightmost desktop column and stacked on mobile. Asset provenance is recorded in `content/image-sources.json`. Confirm its registered-provider wording and usage permission before customer launch, as recorded in `content/site.json`.

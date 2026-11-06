@@ -98,3 +98,18 @@
   .page-services .service-group-photo { height: 180px; }
   .page-contact .contact-actions > .button, .page-referral .contact-actions > .button { width: 100%; }
 }
+
+@media (min-width: 700px) and (max-width: 1199px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1200px) {
+  .footer-grid { grid-template-columns: 1.6fr .8fr 1.4fr .7fr; }
+  .footer-ndis { justify-self: end; }
+}
+@media (max-width: 999px) {
+  .site-header.is-compact .header-inner { min-height: 72px; padding-block: .45rem; }
+  .site-header.is-compact .brand img { width: 72px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top:hover { transform: none; }
+}

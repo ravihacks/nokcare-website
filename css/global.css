@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-offset, 165px); }
 body { margin: 0; background: var(--warm); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.75; }
 img { display: block; max-width: 100%; object-fit: cover; }
 a { color: inherit; text-underline-offset: 5px; }

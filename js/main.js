@@ -1,7 +1,8 @@
-import { setupNavigation, setupEnquiryPreviews } from './components.js';
+import { setupNavigation, setupEnquiryPreviews, setupScrollControls } from './components.js';
 document.documentElement.classList.add('js');
 setupNavigation();
 setupEnquiryPreviews();
+setupScrollControls();
 
 // Progressive enhancement: content remains readable if observers are unsupported.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');

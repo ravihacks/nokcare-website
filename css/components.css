@@ -106,3 +106,16 @@ fieldset:disabled { opacity: .65; }
 .form-panel input:user-invalid, .form-panel textarea:user-invalid { border-color: var(--error); }
 .form-status { margin: 1.5rem 0 0; padding: 1rem; background: var(--pale); border-left: 3px solid var(--gold); font-size: 1rem; }
 .form-status:empty { display: none; }
+
+/* Shared scroll controls. Sticky positioning also works without JavaScript. */
+.site-header { position: sticky; top: 0; z-index: 30; background: var(--warm); max-height: 100dvh; overflow-y: auto; }
+.header-inner { transition: min-height var(--motion-fast) var(--ease), padding var(--motion-fast) var(--ease); }
+.brand img { transition: width var(--motion-fast) var(--ease); }
+.site-header.is-compact { box-shadow: var(--shadow); }
+.site-header.is-compact .header-inner { min-height: 76px; }
+.site-header.is-compact .brand img { width: 76px; }
+.footer-ndis img { width: 150px; height: auto; padding: .75rem; border-radius: var(--small-radius); background: var(--white); }
+.back-to-top { position: fixed; right: max(1.25rem, env(safe-area-inset-right)); bottom: max(1.25rem, env(safe-area-inset-bottom)); z-index: 35; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; background: var(--gold); color: var(--ink); font-size: 1.5rem; cursor: pointer; box-shadow: var(--shadow); transition: transform var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.back-to-top:hover { transform: translateY(-3px); background: var(--warm); }
+
+.utility a { display: inline-flex; align-items: center; min-height: 28px; }
