@@ -11,7 +11,8 @@
       "daily-living",
       "household",
       "sil"
-    ]
+    ],
+    "id": "home-support"
   },
   {
     "title": "Out in your community",
@@ -25,7 +26,8 @@
       "innovative-community",
       "transport",
       "employment"
-    ]
+    ],
+    "id": "community-support"
   },
   {
     "title": "Your plan & support network",
@@ -37,6 +39,7 @@
     "services": [
       "plan-management",
       "coordination"
-    ]
+    ],
+    "id": "plan-support"
   }
 ]

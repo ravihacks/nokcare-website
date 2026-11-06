@@ -100,8 +100,21 @@ The four optimised JPEGs add approximately 657KB in total and load lazily below 
 
 ## Consistent inner pages and staged forms
 
-About, Services, Contact and Referral now have shared photographic mastheads matching the homepage’s type, imagery, spacing and brand tokens. About adds purpose imagery. Services uses three illustrated directory groups and retains all ten service anchors, checked exactly once by the static build checks. Contact and Referral have supporting photographs and one shared form component.
+Inner pages share the homepage’s brand tokens, typography and imagery treatment while using different compositions: an editorial About page, a compact Services directory and task-focused Contact/Referral pages. Services uses three illustrated directory groups and retains all ten service anchors, checked exactly once by the static build checks. Contact and Referral have supporting photographs and one shared form component.
 
 Both form previews use labels, required indicators, native validation, consent controls and live status text. An event guard is registered before controls are enabled, and `requestSubmit()` is explicitly tested without navigation or a POST request. Invalid email addresses are rejected. Form fields remain disabled without JavaScript. The referral preview collects only the enquirer’s name, email, optional phone and relationship—not participant names, NDIS numbers, health data, free-text notes or documents. No actual referral was submitted in testing. QA uses fictitious example details and resets forms before screenshots.
 
 The complete suite was rerun in all three engines: **454 checks per engine, 1,362 total**; no console/asset errors, unexpected non-GET requests or automated accessibility violations. All four inner pages were visually reviewed at mobile and desktop widths. Current captures are `screenshots/inner-<page>-<width>.png`. Form configuration/copy is in `content/forms.json`; settings are documented in README. No approved secure backend was selected or enabled during this revision.
+
+## Inner-page UX audit changes
+
+Applied the approved audit to About, Services, Contact and Referral only. Homepage HTML is byte-identical before/after the build, and the 375px/1440px Chromium homepage screenshots match the preceding version byte-for-byte.
+
+- About: merged the repeated opening messages into one editorial masthead and image; a concise story, mission/vision band and visual values grid replace consecutive identical split sections. The closing action leads to Services.
+- Services: category navigation immediately follows a compact introduction; all three jump links are visible on mobile and resolve to the right groups. Removed repeated preambles and the generic process block. All ten service IDs and both audience destinations remain valid.
+- Contact: quick phone/email actions precede the form. The form comes before secondary details and photography in source/mobile order. Areas and location are compact supporting content.
+- Referral: one task introduction, one enquiry workspace, focused referral FAQs and a closing telephone action replace repeated privacy/call prompts. The final action stays in the referral journey. Preview-form and participant-data protections remain intact.
+
+At 375px, page lengths changed from About 4,896 → 4,524px; Services 8,291 → 6,190px; Contact 5,445 → 4,647px; Referral 7,218 → 4,815px. These are viewport/font-specific observations, not general performance guarantees. Desktop and mobile opening/full-page captures were visually reviewed.
+
+The full Chromium/Firefox/WebKit suite passed again: 454 checks per engine, 1,362 total, with no automated accessibility violations or runtime/asset/request errors. The new sidebar content uses ordinary containers as part of the main task, resolving an accessibility landmark issue found in the first audit run. Additional category navigation, form ordering, referral-action and page-height observations are in `inner-page-flows.json`. Current full-page evidence remains in `screenshots/inner-*.png`.

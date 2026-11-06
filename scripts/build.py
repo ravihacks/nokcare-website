@@ -31,7 +31,7 @@ values['areas'] = '<div class="pills">' + ''.join('<span class="pill">' + escape
 service_lookup = {item['id']: item for item in services}
 groups = json.loads((ROOT / 'content/service-groups.json').read_text())
 values['all_services'] = ''.join(
-    '<section class="service-group"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div>' + service_cards([service_lookup[key] for key in group['services']], True) + '</section>'
+    '<section class="service-group" id="' + escape(group['id']) + '"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div>' + service_cards([service_lookup[key] for key in group['services']], True) + '</section>'
     for group in groups)
 form_settings = json.loads((ROOT / 'content/forms.json').read_text())
 if form_settings['mode'] != 'preview' or form_settings['endpoint'] is not None or form_settings['participantDataEnabled']:
@@ -52,10 +52,11 @@ for page in pages:
     current = dict(values, navigation=navigation)
     hero_copy = '<div class="page-heading-copy"><span class="eyebrow">' + escape(page['eyebrow']) + '</span><h1>' + escape(page['heading']) + '</h1><p class="lead">' + escape(page['intro']) + '</p></div>'
     hero_image = ''
-    if page.get('heroImage'):
+    layout = page.get('heroLayout', 'image')
+    if layout == 'image' and page.get('heroImage'):
         photo = page['heroImage']
         hero_image = '<img class="page-heading-image" src="' + escape(photo['src']) + '" alt="' + escape(photo['alt']) + '" width="' + str(photo['width']) + '" height="' + str(photo['height']) + '" fetchpriority="high">'
-    current['page_hero'] = '<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>' + escape(page['nav']) + '</span></div><div class="page-heading page-heading--image">' + hero_copy + hero_image + '</div></div></section>'
+    current['page_hero'] = '<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>' + escape(page['nav']) + '</span></div><div class="page-heading page-heading--' + layout + '">' + hero_copy + hero_image + '</div></div></section>'
 
     header = render((ROOT/'components/header.html').read_text(),current)
     # The referral CTA also indicates the active page.

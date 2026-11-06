@@ -1,0 +1,122 @@
+[
+  {
+    "file": "about",
+    "width": 375,
+    "height": 4524
+  },
+  {
+    "file": "services",
+    "width": 375,
+    "height": 6190
+  },
+  {
+    "file": "services",
+    "width": 375,
+    "categoryNavigationVisible": true
+  },
+  {
+    "file": "services",
+    "width": 375,
+    "anchor": "home-support",
+    "resolves": true
+  },
+  {
+    "file": "services",
+    "width": 375,
+    "anchor": "community-support",
+    "resolves": true
+  },
+  {
+    "file": "services",
+    "width": 375,
+    "anchor": "plan-support",
+    "resolves": true
+  },
+  {
+    "file": "contact",
+    "width": 375,
+    "height": 4647
+  },
+  {
+    "file": "contact",
+    "width": 375,
+    "formFirst": true,
+    "imageBeforeForm": false
+  },
+  {
+    "file": "referral",
+    "width": 375,
+    "height": 4815
+  },
+  {
+    "file": "referral",
+    "width": 375,
+    "formFirst": true,
+    "imageBeforeForm": false
+  },
+  {
+    "file": "referral",
+    "width": 375,
+    "closingActionStaysInJourney": true
+  },
+  {
+    "file": "about",
+    "width": 1440,
+    "height": 3401
+  },
+  {
+    "file": "services",
+    "width": 1440,
+    "height": 3860
+  },
+  {
+    "file": "services",
+    "width": 1440,
+    "categoryNavigationVisible": true
+  },
+  {
+    "file": "services",
+    "width": 1440,
+    "anchor": "home-support",
+    "resolves": true
+  },
+  {
+    "file": "services",
+    "width": 1440,
+    "anchor": "community-support",
+    "resolves": true
+  },
+  {
+    "file": "services",
+    "width": 1440,
+    "anchor": "plan-support",
+    "resolves": true
+  },
+  {
+    "file": "contact",
+    "width": 1440,
+    "height": 2732
+  },
+  {
+    "file": "contact",
+    "width": 1440,
+    "formFirst": true,
+    "imageBeforeForm": false
+  },
+  {
+    "file": "referral",
+    "width": 1440,
+    "height": 2928
+  },
+  {
+    "file": "referral",
+    "width": 1440,
+    "formFirst": true,
+    "imageBeforeForm": false
+  },
+  {
+    "file": "referral",
+    "width": 1440,
+    "closingActionStaysInJourney": true
+  }
+]

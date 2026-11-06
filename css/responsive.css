@@ -82,3 +82,19 @@
   .reveal.is-pending { opacity: 1; transform: none; }
   .button:not(:disabled):hover, .button:not(:disabled):active, .button:hover > span, .button:focus-visible > span, .text-link:hover span { transform: none; }
 }
+@media (min-width: 700px) {
+  .purpose-grid, .values-grid, .aged-care-guidance { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+}
+@media (min-width: 1000px) {
+  .values-feature { grid-template-columns: .85fr 1.5fr; gap: 4rem; }
+  .values-feature > img { height: 480px; }
+  .task-workspace { grid-template-columns: 1.4fr .9fr; gap: 4rem; }
+  .page-services .service-group-photo { height: 250px; }
+}
+@media (max-width: 699px) {
+  .about-banner img { height: 250px; }
+  .values-feature > img { height: 260px; }
+  .page-services .category-nav > a { flex: 1 1 100%; }
+  .page-services .service-group-photo { height: 180px; }
+  .page-contact .contact-actions > .button, .page-referral .contact-actions > .button { width: 100%; }
+}

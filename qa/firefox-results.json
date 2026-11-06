@@ -2410,7 +2410,19 @@
             },
             {
               "target": [
-                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+                "a[href$=\"#home-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#community-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#plan-support\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2465,6 +2477,12 @@
             {
               "target": [
                 ".menu-toggle > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#referral-enquiry-panel\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2608,7 +2626,19 @@
           "nodes": [
             {
               "target": [
-                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+                "a[href$=\"#home-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#community-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#plan-support\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2648,6 +2678,12 @@
         {
           "id": "color-contrast",
           "nodes": [
+            {
+              "target": [
+                "a[href$=\"#referral-enquiry-panel\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
             {
               "target": [
                 ".cta > div:nth-child(1) > .eyebrow"

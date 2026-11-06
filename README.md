@@ -8,7 +8,7 @@ Five static HTML pages using CSS and vanilla JavaScript. No framework, package i
 - `templates/`: editable page HTML and editorial content.
 - `components/`: shared header and footer partials.
 - `content/site.json`: contact information, service areas and launch review items.
-- `content/pages.json`: titles, descriptions, introductory content and inner-page hero photography.
+- `content/pages.json`: titles, descriptions, introductory content and inner-page masthead variants (`heroLayout`).
 - `content/forms.json`: shared form copy and preview settings.
 - `content/service-groups.json`: illustrated service-directory groups; categories remain in `services.json`.
 - `content/services.json`, `content/values.json`: reusable content collections. Optional `displayTitle` supplies a plain-English service label while preserving its published category title.
@@ -99,4 +99,11 @@ Sources and intended usage for the four new photographs are in `content/image-so
 
 ## Inner-page design consistency
 
-About, Services, Contact and Referral use the same photo-led masthead, type scale, rounded imagery, gold details and shared contact panel. Services are grouped into three illustrated sections while keeping all ten original service anchors. About pairs its existing values and purpose with supporting imagery. Contact and Referral use matching form panels and an image-supported introduction. No new images or business claims were required for this pass.
+Inner pages share brand tokens, typography, buttons and photographic treatment while using layouts suited to their purpose:
+
+- About uses an editorial masthead, one opening image, a concise story, a mission/vision band and a visual values grid.
+- Services uses a compact masthead and category jump links before its three illustrated groups. All ten service anchors plus the homepage’s aged care and disability destinations remain available.
+- Contact uses a compact masthead, immediate phone/email actions and the form before supporting information in mobile/source order.
+- Referral uses the same task layout with concise guidance, referral-specific FAQs and a closing telephone action that stays in the referral journey.
+
+Use `heroLayout: "editorial"` or `"compact"` in `content/pages.json`. The builder also retains the `"image"` masthead variant for future use with `heroImage`. Section modifiers `section-tight` and `section-standard` provide spacing hierarchy. Category IDs belong in `content/service-groups.json`. The homepage is unchanged by this inner-page revision; its HTML checksum was verified before and after building.

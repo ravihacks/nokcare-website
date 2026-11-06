@@ -1984,7 +1984,7 @@
     {
       "name": "services.html at 1440px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":1440,\"scroll\":1440,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/community-connections.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":1440,\"scroll\":1440,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/community-connections.jpg\",\"http://127.0.0.1:8765/assets/images/planning-together.jpg\"],\"fonts\":[true,true]}"
     },
     {
       "name": "services.html at 1440px: images load",
@@ -2410,7 +2410,19 @@
             },
             {
               "target": [
-                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+                "a[href$=\"#home-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#community-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#plan-support\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2471,6 +2483,12 @@
             {
               "target": [
                 ".menu-toggle > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#referral-enquiry-panel\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2614,7 +2632,19 @@
           "nodes": [
             {
               "target": [
-                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+                "a[href$=\"#home-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#community-support\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#plan-support\"] > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             },
@@ -2666,6 +2696,12 @@
         {
           "id": "color-contrast",
           "nodes": [
+            {
+              "target": [
+                "a[href$=\"#referral-enquiry-panel\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
             {
               "target": [
                 ".cta > div:nth-child(1) > .eyebrow"
