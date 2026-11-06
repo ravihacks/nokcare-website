@@ -32,7 +32,7 @@ The builder works from any directory. Do not directly edit generated root HTML; 
 
 ## Branding and layouts
 
-Change tokens in `css/brand.css` and replace the logo/favicon assets. The existing logo is reused, not redesigned. Montserrat is self-hosted under the SIL Open Font License; see `assets/fonts/OFL.txt`. Reusable classes include `hero-grid`, `split`, `split-wide`, `service-grid`, `white`, `button-secondary` and `cta`. Brand-specific information belongs in configuration, not functionality scripts. For another client, review all editorial templates and metadata too.
+Change tokens in `css/brand.css` and replace the logo/favicon assets. The existing logo is reused, not redesigned. Montserrat is self-hosted under the SIL Open Font License; see `assets/fonts/OFL.txt`. Reusable classes include `editorial-row`, `split`, `split-wide`, `service-grid`, `white`, `button-secondary` and `cta`. Brand-specific information belongs in configuration, not functionality scripts. For another client, review all editorial templates and metadata too.
 
 The design uses the requested gold, warm white, charcoal and white. Dark text sits on gold buttons; the darker gold token is used for readable small accent text. CSS breakpoints are 700px and 1000px, with small-screen adjustments at 480px. Navigation and native FAQ details work without a framework; navigation remains visible if scripts cannot load.
 
@@ -72,18 +72,14 @@ Rebuild and check locally. Upload the five root HTML pages and the `css/`, `js/`
 
 Use Git to review and commit source changes, including generated HTML after rebuilding. No remote is configured by this project.
 
-## Visual redesign
+## Current visual direction
 
-The redesign adds layered hero photography, image-led service cards, photographic inner-page headers, a charcoal story section and a nature-backed contact CTA. Site image settings are in `content/site.json`, card images in `content/services.json`, and inner-page header images in `content/pages.json`. Editorial imagery and background placement are maintained in templates and layout CSS.
+The homepage has a wide photographic opening, a two-column introduction, a service index, a separate editorial photo section and a dark service-area directory. Inner pages use a quieter masthead; contact and referral pages prioritise practical next steps. Service rows replace repeated stock-photo cards. Montserrat, fine dividing rules, restrained gold accents and square button corners give the pages a consistent identity without making every section the same.
 
-Motion uses native CSS transitions and an IntersectionObserver: gentle one-time reveals, staggered card entrances, hover elevation, image zoom and moving button arrows. Keyboard focus remains visible; focused and anchor-target content is revealed. Reduced-motion settings remove entrance animation and interaction movement. No animation library, scroll handler or continuously looping effect is used.
+The homepage composition is in `templates/index.html`; editorial templates hold page-specific copy. Contact details, areas, services, values and page metadata remain in JSON. The five CSS files were rewritten for this direction instead of layering further overrides on the previous design.
 
-Additional illustrative Unsplash assets (not NOK Care staff, clients or facilities):
+Motion is limited to brief button-arrow movement and gentle one-time section reveals. Focused and anchor-target content is revealed; reduced-motion settings remove animation. No animation library, looping effects, parallax or hover-dependent content is used.
 
-- `family-connection.jpg`: https://images.unsplash.com/photo-1511632765486-a01980e01a18
-- `everyday-support.jpg`: https://images.unsplash.com/photo-1544027993-37dbfe43562a
-- `nature.jpg`: https://images.unsplash.com/photo-1441974231531-c6227db76b6e
+Photography is illustrative, not represented as NOK Care staff, clients or facilities. The existing NOK Care photo is used in the homepage opening and About page. The additional photo used in the editorial homepage section is https://images.unsplash.com/photo-1511632765486-a01980e01a18 (`family-connection.jpg`). Previously downloaded `everyday-support.jpg` and `nature.jpg` are retained but are not displayed in this revision. Their sources are https://images.unsplash.com/photo-1544027993-37dbfe43562a and https://images.unsplash.com/photo-1441974231531-c6227db76b6e respectively. All imagery is locally hosted; confirm permissions before launch.
 
-Downloaded at optimised display widths; all are served locally. Confirm image rights and suitability as part of the existing launch review. Additional image downloads total approximately 530 KB; below-fold content images are lazy-loaded. The nature image is a decorative CSS background.
-
-Redesign validation: rebuilt all five pages; static structure/link checks and JavaScript syntax checks passed. Browser automation was unavailable, so rendered layouts, hover motion and responsive interaction still need visual browser verification.
+Validation: regenerated all five pages; static structure/link checks, JavaScript syntax checks and Git whitespace checks passed. Browser automation was unavailable, so rendered layouts and responsive interactions still require visual browser QA. Genuine team and local photography would give the site further specificity when approved assets become available.

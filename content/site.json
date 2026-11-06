@@ -20,13 +20,5 @@
     "Confirm address spelling, office hours and appointment arrangements.",
     "Approve secure contact backend, privacy notice and referral integration.",
     "Confirm permission for existing website images before public deployment."
-  ],
-  "images": {
-    "heroInset": {
-      "src": "assets/images/family-connection.jpg",
-      "alt": "Friends standing together outdoors at sunset",
-      "width": 1000,
-      "height": 667
-    }
-  }
+  ]
 }

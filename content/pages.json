@@ -6,38 +6,34 @@
     "description": "Explore personalised aged care and disability support with NOK Care in Melbourne, Lara, Bannockburn, Geelong and Werribee.",
     "eyebrow": "",
     "heading": "",
-    "intro": "",
-    "image": "community-care.jpg"
+    "intro": ""
   },
   {
     "file": "about.html",
     "nav": "About us",
     "title": "About Us | Next of Kin Care",
     "description": "Get to know NOK Care\u2019s approach to choice, independence, inclusion and compassionate aged care and disability support.",
-    "eyebrow": "Get to know NOK Care",
-    "heading": "People at the heart of care.",
-    "intro": "Individual needs. Meaningful choices. Support that respects who you are.",
-    "image": "community-care.jpg"
+    "eyebrow": "About Next of Kin Care",
+    "heading": "Care begins with understanding the person.",
+    "intro": "Our approach brings together individual choice, cultural respect and practical support."
   },
   {
     "file": "services.html",
     "nav": "Services",
     "title": "Our Services | Next of Kin Care",
     "description": "Explore NOK Care services including daily living, personal care, household tasks, transport, community participation and NDIS support.",
-    "eyebrow": "Care shaped around you",
-    "heading": "Support for your everyday.",
-    "intro": "From daily routines to new goals, explore support that fits your life.",
-    "image": "community-care.jpg"
+    "eyebrow": "Our services",
+    "heading": "Help at home. Support to get out.",
+    "intro": "Browse our aged care and disability support services. Call us to discuss your needs, funding and availability."
   },
   {
     "file": "contact.html",
     "nav": "Contact us",
     "title": "Contact Us | Next of Kin Care",
     "description": "Contact Next of Kin Care on 0466 779 972 or 0420 550 694. Ask about aged care, disability services and support in your area.",
-    "eyebrow": "Let\u2019s connect",
-    "heading": "A conversation can change a day.",
-    "intro": "Tell us what you\u2019re looking for. We\u2019ll help you explore the next step.",
-    "image": "family-connection.jpg"
+    "eyebrow": "Contact us",
+    "heading": "Talk to the NOK Care team.",
+    "intro": "Ask about services, availability or support for someone close to you."
   },
   {
     "file": "referral.html",
@@ -45,8 +41,7 @@
     "title": "NDIS Referral | Next of Kin Care",
     "description": "Talk to NOK Care about starting an NDIS referral. Call the team to confirm availability and arrange a secure way to share information.",
     "eyebrow": "NDIS referrals",
-    "heading": "A new connection. A next step.",
-    "intro": "Connect yourself or someone you support with Next of Kin Care.",
-    "image": "family-connection.jpg"
+    "heading": "Start a referral with a phone call.",
+    "intro": "For participants, families and professionals seeking support through Next of Kin Care."
   }
 ]
