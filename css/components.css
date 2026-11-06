@@ -72,3 +72,8 @@ fieldset:disabled { opacity: .65; }
 .step > span { color: var(--dark-gold); font-size: .8rem; }
 .step h3 { margin: 1rem 0; }
 .step p { color: var(--muted); font-size: .95rem; }
+
+/* A reusable, decorative-icon list with readable text labels. */
+.icon-list { margin: 0; padding-inline: 0; list-style: none; }
+.icon-list > li { display: flex; align-items: center; gap: 1rem; min-width: 0; font-size: .95rem; font-weight: 500; }
+.icon-list-symbol { display: grid; place-items: center; width: 56px; height: 56px; flex-shrink: 0; color: var(--dark-gold); background: var(--gold-soft); border-radius: 50%; }

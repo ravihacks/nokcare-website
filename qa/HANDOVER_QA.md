@@ -8,7 +8,7 @@ Decision: suitable for customer review after the fixes below. Production accepta
 
 All five pages were tested locally over HTTP. The browser suite covers six viewport widths: 320, 375, 640, 768, 1000 and 1440 pixels. The 320px check also covers the viewport-width reflow condition associated with a 1280px desktop at 400% zoom; actual browser zoom and physical devices were not tested.
 
-Final result: **1,116 checks passed across three engines**, with zero automated accessibility violations across 30 page/viewport audits. Machine-readable results are in `chromium-results.json`, `firefox-results.json` and `webkit-results.json`.
+Full handover baseline: **1,116 checks passed across three engines**, with zero automated accessibility violations across 30 page/viewport audits. Machine-readable results are in `chromium-results.json`, `firefox-results.json` and `webkit-results.json`.
 
 | Engine | Tested version | Checks passed | Failures |
 | --- | --- | --- | --- |
@@ -95,3 +95,9 @@ node scripts/qa-browser.cjs
 ```
 
 The runner exits nonzero for failed checks or an incomplete run. `QA_BASE_URL` can target the final hosted subdirectory (without a trailing slash). Stop the local HTTP server after testing. Upload only the five pages and their CSS, JS and asset folders to conventional hosting; QA tooling and source guidance are not production assets.
+
+## Icon list and introduction revision
+
+The three service labels below the hero now use a semantic list with decorative SVG icons. The following introduction uses an image on the left and content on the right at 700px and above, stacking on mobile. Existing wording and navigation are preserved. A shared icon-list component uses the brand tokens.
+
+This subsequent revision passed all **372 Chromium regression checks** across the same six viewport widths, including ten axe audits with no automated violations. Browser screenshots and element positions were also checked at 375px, 768px and 1440px to confirm stacking and column order. Firefox and WebKit results above describe the preceding full-image-hero baseline; they were not rerun for this small section change. Evidence: `introduction-chromium-results.json`.
