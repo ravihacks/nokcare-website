@@ -1,0 +1,52 @@
+[
+  {
+    "id": "daily-living",
+    "title": "Daily living & life skills",
+    "description": "Build practical skills for everyday independence, including cooking, budgeting and daily routines."
+  },
+  {
+    "id": "plan-management",
+    "title": "NDIS plan management",
+    "description": "Support with invoices, provider payments, budget tracking and financial reporting."
+  },
+  {
+    "id": "sil",
+    "title": "Supported independent living",
+    "description": "Personalised assistance with everyday life in an independent or shared home."
+  },
+  {
+    "id": "household",
+    "title": "Household tasks",
+    "description": "Practical help with cleaning, laundry, meal preparation and keeping your home comfortable."
+  },
+  {
+    "id": "transport",
+    "title": "Travel & transport assistance",
+    "description": "Support to get to appointments, education, work and activities in your community."
+  },
+  {
+    "id": "innovative-community",
+    "title": "Innovative community participation",
+    "description": "Explore interests, develop skills and build confidence through meaningful activities."
+  },
+  {
+    "id": "personal-care",
+    "title": "Daily personal activities",
+    "description": "Respectful support with personal routines, mobility, meals and everyday wellbeing."
+  },
+  {
+    "id": "community",
+    "title": "Community participation",
+    "description": "Stay connected through social, recreational, cultural and community activities."
+  },
+  {
+    "id": "coordination",
+    "title": "Support coordination",
+    "description": "Help understanding your NDIS plan and connecting with suitable services and supports."
+  },
+  {
+    "id": "employment",
+    "title": "Employment & higher education",
+    "description": "Practical support with job readiness, applications, study skills and workplace confidence."
+  }
+]

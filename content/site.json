@@ -1,0 +1,24 @@
+{
+  "name": "Next of Kin Care",
+  "shortName": "NOK Care",
+  "email": "info@nokcare.com.au",
+  "phones": [
+    "0466 779 972",
+    "0420 550 694"
+  ],
+  "address": "Huttson Street, Deanside",
+  "areas": [
+    "Melbourne",
+    "Lara",
+    "Bannockburn",
+    "Geelong",
+    "Werribee"
+  ],
+  "contactFormEndpoint": null,
+  "reviewRequired": [
+    "Confirm current service availability and eligibility.",
+    "Confirm address spelling, office hours and appointment arrangements.",
+    "Approve secure contact backend, privacy notice and referral integration.",
+    "Confirm permission for existing website images before public deployment."
+  ]
+}
