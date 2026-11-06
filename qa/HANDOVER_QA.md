@@ -16,7 +16,7 @@ Final result: **1,116 checks passed across three engines**, with zero automated 
 | Firefox | 151.0 | 372 / 372 | 0 |
 | Webkit | 26.5 | 372 / 372 | 0 |
 
-Axe left the decorative mobile-menu symbol for manual contrast review. Its charcoal colour against warm white measures 13.02:1; the symbol is decorative and the button has visible “Menu” text. The automated incomplete result is retained in the JSON evidence.
+Axe left the decorative mobile-menu symbol and image-backed hero text for manual contrast review. The hero was visually reviewed at desktop/mobile sizes; white copy and large gold text use a dark overlay that is stronger on narrow screens. Its charcoal colour against warm white measures 13.02:1; the symbol is decorative and the button has visible “Menu” text. The automated incomplete result is retained in the JSON evidence.
 
 Desktop and mobile screenshots were inspected for cropping, alignment, hierarchy and clipping. Representative screenshots are retained in `qa/screenshots/`; the runner writes all captures to its configured output folder.
 
@@ -33,6 +33,10 @@ Checks include:
 - The contact preview accepts no input and has no enabled submission action; referral pages collect no participant information.
 - No console errors, JavaScript exceptions or failed HTTP asset requests during the suite.
 - Axe-core audits against WCAG A/AA tags through WCAG 2.2 and best-practice rules at 375px and 1440px. Automated audits cover only detectable issues.
+
+## Full-image hero revision
+
+The homepage now uses an edge-to-edge image with overlaid text and actions. A stronger overlay on narrow screens preserves readability; the service summary remains below the hero. Desktop (1440px) and mobile (375px) viewport captures were visually reviewed. The hero has a minimum height and grows with its content to support text-spacing changes. Regression evidence below is refreshed for this revision.
 
 ## Defects corrected
 

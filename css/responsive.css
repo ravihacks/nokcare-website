@@ -10,7 +10,6 @@
   .local-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
 }
 @media (min-width: 1000px) {
-  .opening-grid { grid-template-columns: 1.05fr 1fr; gap: 3rem; }
   .editorial-row, .page-heading { grid-template-columns: 1fr 2.6fr; gap: 4rem; }
   .editorial-row > .eyebrow, .page-heading > .eyebrow { padding-top: .65rem; }
   .split { grid-template-columns: 1fr 1fr; gap: 5rem; }
@@ -22,9 +21,8 @@
   .page-services .section-heading { grid-template-columns: 1fr 1fr; gap: 4rem; }
 }
 @media (max-width: 999px) {
-  .opening-grid { gap: 2rem; }
-  .opening-copy { max-width: 650px; }
-  .opening-photo > img { height: 470px; }
+  .home-opening { min-height: 660px; }
+  .home-opening::before { background: linear-gradient(90deg, var(--hero-scrim-strong), var(--hero-scrim-mid)); }
   .header-inner { flex-wrap: wrap; gap: 0; min-height: 90px; padding-block: .7rem; }
   .brand img { width: 96px; }
   .menu-toggle:not([hidden]) { display: block; }
@@ -40,7 +38,6 @@
   .service-card { grid-template-columns: 24px minmax(0, 1fr) 44px; gap: .65rem; }
   .service-card h3 { font-size: 1.05rem; }
   .service-card p { font-size: .95rem; }
-  .opening-photo > img { height: 400px; }
   .opening-footnote { gap: .75rem; flex-direction: column; }
   .perspective-grid figure img { height: 340px; }
   .page-heading { gap: .25rem; }
@@ -53,8 +50,6 @@
   .actions > .button { width: 100%; }
   .footer-bottom { flex-direction: column; }
   .opening-copy h1 { font-size: clamp(2.75rem, 11vw, 3.3rem); }
-  .opening-photo figcaption { bottom: .8rem; left: .8rem; right: .8rem; padding: 1rem; }
-  .opening-photo figcaption strong { font-size: .85rem; }
   .editorial-image { height: 340px; }
 }
 @media (prefers-reduced-motion: reduce) {
