@@ -9,7 +9,7 @@ Five static HTML pages using CSS and vanilla JavaScript. No framework, package i
 - `components/`: shared header and footer partials.
 - `content/site.json`: contact information, service areas and launch review items.
 - `content/pages.json`: page titles, descriptions and introductory content.
-- `content/services.json`, `content/values.json`: reusable content collections.
+- `content/services.json`, `content/values.json`: reusable content collections. Optional `displayTitle` supplies a plain-English service label while preserving its published category title.
 - `css/brand.css`: palette, type, spacing and radius tokens; local font declarations.
 - `css/global.css`: reset, typography and accessibility foundations.
 - `css/components.css`: navigation, buttons, cards, accordions and forms.
@@ -44,13 +44,13 @@ python3 -m http.server 8000
 
 Visit `http://localhost:8000`. Stop with Ctrl-C. Static checks validate links, fragments, unique IDs, page landmarks, H1 counts, image dimensions/alt attributes, field labels and placeholder resolution. They do not certify WCAG conformance.
 
-Handover QA has now run in Chromium, Firefox and WebKit at six widths from 320px to 1440px: 1,116 checks passed, with no automated accessibility violations. See [the QA report](qa/HANDOVER_QA.md) for evidence, corrected defects, reproduction steps and outstanding acceptance items. Real-device, installed-browser, screen-reader and actual browser-zoom testing remain customer acceptance tasks.
+Handover QA has now run in Chromium, Firefox and WebKit at six widths from 320px to 1440px: 1,188 checks passed, with no automated accessibility violations. See [the QA report](qa/HANDOVER_QA.md) for evidence, corrected defects, reproduction steps and outstanding acceptance items. Real-device, installed-browser, screen-reader and actual browser-zoom testing remain customer acceptance tasks.
 
 ## Contact and referrals
 
-The contact form is an explicitly disabled preview. It neither submits nor stores data, and there is no simulated success message. Phone and general email links are available. `contactFormEndpoint` is null and intentionally not wired into scripts. Online referrals, uploads, analytics and browser storage are absent.
+Contact is a finished phone/email-only page with direct links, location information and a short guide to making a general enquiry. The disabled form preview has been removed. `contactFormEndpoint` is null and intentionally not wired into scripts. Online referrals, uploads, analytics and browser storage are absent.
 
-Before enabling enquiries, select an approved secure backend and implement server validation, rate limiting/spam protection, access controls, retention rules, error/success handling and an approved privacy notice. Do not merely remove `disabled` or use a mailto form. Review field names and consent requirements with the chosen integration. Referral collection needs a separately reviewed secure workflow; never use localStorage, public files or general email for participant records.
+Before adding online enquiry forms, select an approved secure backend and implement server validation, rate limiting/spam protection, access controls, retention rules, error/success handling and an approved privacy notice. Do not collect sensitive information through a mailto form. Review field names and consent requirements with the chosen integration. Referral collection needs a separately reviewed secure workflow; never use localStorage, public files or general email for participant records.
 
 ## Sources and launch review
 
@@ -78,10 +78,10 @@ Reviewed the public HTML and CSS of https://enablehub.com.au/ and https://www.ca
 
 Typography uses bold Plus Jakarta Sans headings with more open letter spacing than the previous version, Poppins body copy at 17px, larger service descriptions and navigation, and fluid heading sizes. Section spacing scales from 60px to 100px. Buttons have 54px minimum height, 8px corners, consistent padding, subtle hover elevation and moving arrows. These settings are maintained in the brand, global and component stylesheets.
 
-The homepage begins with an edge-to-edge image hero: the introduction, two actions and telephone link sit over a dark overlay for contrast. Image positioning and the overlay adapt for narrow screens; the hero grows with its content rather than clipping text. A three-item icon list sits below. The introduction pairs a left-hand image with right-hand content on tablet/desktop and stacks the image above the content on mobile. The service directory, photo-led approach section, local service areas, FAQ and contact panel each have a distinct purpose. The shared charcoal contact panel uses a quiet forest photograph beneath a dark gradient, with a telephone link and gold contact button. A stronger mobile overlay keeps its text readable. The image and gradients are defined in `css/components.css`; overlay colours are tokens in `css/brand.css`. Inner pages retain practical mastheads and readable service rows.
+The homepage begins with an edge-to-edge image hero: the introduction, two actions and telephone link sit over a dark overlay for contrast. Image positioning and the overlay adapt for narrow screens; the hero grows with its content rather than clipping text. A three-item icon list sits below. The introduction pairs a left-hand image with right-hand content on tablet/desktop and stacks the image above the content on mobile. The homepage includes clear aged care and disability/NDIS pathways, linked service rows, a practical getting-started section, compact service areas, FAQ and contact panel. The introduction uses a different illustrative photograph from the hero. Service and FAQ text is at least 16px; mobile section spacing is tighter. The shared charcoal contact panel uses a quiet forest photograph beneath a dark gradient, with a telephone link and gold contact button. A stronger mobile overlay keeps its text readable. The image and gradients are defined in `css/components.css`; overlay colours are tokens in `css/brand.css`. Inner pages retain practical mastheads and readable service rows.
 
 Edit the homepage composition in `templates/index.html` and the other page templates for editorial copy. Contact details, areas, services, values and metadata remain in JSON. `DESIGN_GUIDELINES.md` reflects the typography update. Motion uses native CSS transitions and IntersectionObserver with reduced-motion and keyboard-focus support. There is no animation library or looping motion.
 
 Photography is illustrative, not presented as NOK Care staff, clients or facilities. The main photo is reused from the existing NOK Care website. The editorial homepage photo is https://images.unsplash.com/photo-1511632765486-a01980e01a18 (`family-connection.jpg`). The decorative contact-panel background is `nature.jpg` (https://images.unsplash.com/photo-1441974231531-c6227db76b6e). The previously downloaded `everyday-support.jpg` (https://images.unsplash.com/photo-1544027993-37dbfe43562a) remains unused. Confirm permissions before launch.
 
-Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Handover QA additionally passed 1,116 checks in Chromium, Firefox and WebKit; see `qa/HANDOVER_QA.md`. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.
+Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Handover QA additionally passed 1,188 checks in Chromium, Firefox and WebKit; see `qa/HANDOVER_QA.md`. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.

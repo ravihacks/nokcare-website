@@ -18,7 +18,7 @@
   "reviewRequired": [
     "Confirm current service availability and eligibility.",
     "Confirm address spelling, office hours and appointment arrangements.",
-    "Approve secure contact backend, privacy notice and referral integration.",
+    "Approve the privacy notice for phone/email enquiries; separately review any future online enquiry or secure referral integration.",
     "Confirm permission for existing website images before public deployment."
   ]
 }

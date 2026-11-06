@@ -9,7 +9,7 @@
     {
       "name": "index.html at 320px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":320,\"scroll\":320,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":320,\"scroll\":320,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 320px: images load",
@@ -23,6 +23,21 @@
     },
     {
       "name": "index.html at 320px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 320px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 320px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 320px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -222,7 +237,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 320px: form cannot accept data",
+      "name": "contact.html at 320px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 320px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -324,7 +344,7 @@
     {
       "name": "index.html at 375px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":375,\"scroll\":375,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":375,\"scroll\":375,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 375px: images load",
@@ -338,6 +358,21 @@
     },
     {
       "name": "index.html at 375px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 375px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 375px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 375px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -552,7 +587,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 375px: form cannot accept data",
+      "name": "contact.html at 375px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 375px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -664,7 +704,7 @@
     {
       "name": "index.html at 640px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":640,\"scroll\":640,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":640,\"scroll\":640,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 640px: images load",
@@ -678,6 +718,21 @@
     },
     {
       "name": "index.html at 640px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 640px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 640px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 640px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -877,7 +932,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 640px: form cannot accept data",
+      "name": "contact.html at 640px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 640px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -979,7 +1039,7 @@
     {
       "name": "index.html at 768px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":768,\"scroll\":768,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":768,\"scroll\":768,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 768px: images load",
@@ -993,6 +1053,21 @@
     },
     {
       "name": "index.html at 768px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 768px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 768px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 768px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -1192,7 +1267,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 768px: form cannot accept data",
+      "name": "contact.html at 768px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 768px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -1294,7 +1374,7 @@
     {
       "name": "index.html at 1000px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":1000,\"scroll\":1000,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":1000,\"scroll\":1000,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 1000px: images load",
@@ -1308,6 +1388,21 @@
     },
     {
       "name": "index.html at 1000px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1000px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1000px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1000px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -1447,7 +1542,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 1000px: form cannot accept data",
+      "name": "contact.html at 1000px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 1000px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -1534,7 +1634,7 @@
     {
       "name": "index.html at 1440px: no horizontal overflow",
       "pass": true,
-      "evidence": "{\"viewport\":1440,\"scroll\":1440,\"overflowing\":[],\"brokenImages\":[\"http://127.0.0.1:8765/assets/images/family-connection.jpg\"],\"fonts\":[true,true]}"
+      "evidence": "{\"viewport\":1440,\"scroll\":1440,\"overflowing\":[],\"brokenImages\":[],\"fonts\":[true,true]}"
     },
     {
       "name": "index.html at 1440px: images load",
@@ -1548,6 +1648,21 @@
     },
     {
       "name": "index.html at 1440px: one active navigation item",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1440px: two support pathways",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1440px: every featured service has a linked title",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "index.html at 1440px: no repeated hero/introduction image",
       "pass": true,
       "evidence": ""
     },
@@ -1702,7 +1817,12 @@
       "evidence": ""
     },
     {
-      "name": "contact.html at 1440px: form cannot accept data",
+      "name": "contact.html at 1440px: finished contact page has no form preview",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "contact.html at 1440px: direct contact channels exist",
       "pass": true,
       "evidence": ""
     },
@@ -1925,6 +2045,24 @@
                 "strong"
               ],
               "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             }
           ]
         }
@@ -1943,6 +2081,24 @@
                 "button > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             }
           ]
         }
@@ -1961,6 +2117,30 @@
                 "button > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             }
           ]
         }
@@ -1976,7 +2156,7 @@
           "nodes": [
             {
               "target": [
-                ".menu-toggle > span[aria-hidden=\"true\"]"
+                "button > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
             }
@@ -1997,6 +2177,24 @@
                 "button > span[aria-hidden=\"true\"]"
               ],
               "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             }
           ]
         }
@@ -2057,6 +2255,24 @@
                 "strong"
               ],
               "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             }
           ]
         }
@@ -2066,13 +2282,67 @@
       "file": "about.html",
       "width": 1440,
       "violations": [],
-      "incomplete": []
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
     },
     {
       "file": "services.html",
       "width": 1440,
       "violations": [],
-      "incomplete": []
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                "a[href$=\"#service-directory\"] > span[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
     },
     {
       "file": "contact.html",
@@ -2084,14 +2354,38 @@
       "file": "referral.html",
       "width": 1440,
       "violations": [],
-      "incomplete": []
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".cta > div:nth-child(1) > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta > div:nth-child(1) > h2"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                ".cta-phone"
+              ],
+              "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            }
+          ]
+        }
+      ]
     }
   ],
   "engine": "webkit",
   "browserVersion": "26.5",
   "summary": {
-    "total": 372,
-    "passed": 372,
+    "total": 396,
+    "passed": 396,
     "failed": 0
   }
 }

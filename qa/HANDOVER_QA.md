@@ -2,76 +2,72 @@
 
 Review date: 6 November 2026 (Australia/Brisbane).
 
-Decision: suitable for customer review after the fixes below. Production acceptance remains conditional on business approvals, secure form scope and hosting verification. This is not a WCAG certification or a completed production launch.
+**Current result: 1,188 checks passed across Chromium, Firefox and WebKit.** No automated accessibility violations were found across 30 page/viewport audits. The five pages are ready for customer review. Production acceptance remains conditional on business approvals, the final hosting check and real-device/user acceptance.
 
-## Scope and evidence
-
-All five pages were tested locally over HTTP. The browser suite covers six viewport widths: 320, 375, 640, 768, 1000 and 1440 pixels. The 320px check also covers the viewport-width reflow condition associated with a 1280px desktop at 400% zoom; actual browser zoom and physical devices were not tested.
-
-Full handover baseline: **1,116 checks passed across three engines**, with zero automated accessibility violations across 30 page/viewport audits. Machine-readable results are in `chromium-results.json`, `firefox-results.json` and `webkit-results.json`.
+## Browser evidence
 
 | Engine | Tested version | Checks passed | Failures |
 | --- | --- | --- | --- |
-| Chromium | 149.0.7827.55 | 372 / 372 | 0 |
-| Firefox | 151.0 | 372 / 372 | 0 |
-| Webkit | 26.5 | 372 / 372 | 0 |
+| Chromium | 149.0.7827.55 | 396 / 396 | 0 |
+| Firefox | 151.0 | 396 / 396 | 0 |
+| Webkit | 26.5 | 396 / 396 | 0 |
 
-Axe left the decorative mobile-menu symbol and image-backed hero text for manual contrast review. The hero was visually reviewed at desktop/mobile sizes; white copy and large gold text use a dark overlay that is stronger on narrow screens. Its charcoal colour against warm white measures 13.02:1; the symbol is decorative and the button has visible “Menu” text. The automated incomplete result is retained in the JSON evidence.
+The current machine-readable evidence is `chromium-results.json`, `firefox-results.json` and `webkit-results.json`. Screenshots `screenshots/index-1440.png`, `screenshots/ux-home-375.png`, `screenshots/ux-services-375.png` and `screenshots/contact-375.png` show the current UX revision. Earlier scoped evidence/captures are retained as historical records.
 
-Desktop and mobile screenshots were inspected for cropping, alignment, hierarchy and clipping. Representative screenshots are retained in `qa/screenshots/`; the runner writes all captures to its configured output folder.
+All five pages were tested over local HTTP at 320, 375, 640, 768, 1000 and 1440px. Checks include:
 
-Checks include:
+- Page/asset loading, fonts, active navigation, no horizontal overflow and JavaScript/console errors.
+- Mobile menu opening/closing, Escape from toggle and navigation, focus return, desktop toggle visibility.
+- FAQ operation with Enter and Space, skip link, direct service fragments and malformed fragments.
+- Navigation without JavaScript, scroll reveals and reduced-motion behavior.
+- Increased line height, letter/word spacing and paragraph margins at 375px.
+- A finished contact page with phone/email links and no form preview or data collection; no referral inputs.
+- Separate support pathways, linked service titles and different hero/introduction images.
+- Axe-core WCAG A/AA tags through WCAG 2.2 and best-practice audits at 375px and 1440px.
 
-- Every page loads; local images and selected fonts load; no horizontal page overflow.
-- Mobile menu opens and closes, Escape works from the toggle and navigation, focus returns to the toggle, and desktop navigation shows without a mobile Menu button.
-- Active navigation is correct on all five pages.
-- FAQ entries open with Enter and close with Space.
-- The skip link moves keyboard focus to main content. WebKit uses Option+Tab to include links, consistent with macOS/Safari keyboard navigation preferences.
-- Navigation remains visible without JavaScript; scroll reveals expose content; changing to reduced motion reveals content and disables transitions.
-- Direct service fragments resolve; malformed URL fragments produce no runtime error.
-- Increased line height, letter spacing, word spacing and paragraph spacing do not cause horizontal overflow.
-- The contact preview accepts no input and has no enabled submission action; referral pages collect no participant information.
-- No console errors, JavaScript exceptions or failed HTTP asset requests during the suite.
-- Axe-core audits against WCAG A/AA tags through WCAG 2.2 and best-practice rules at 375px and 1440px. Automated audits cover only detectable issues.
+WebKit keyboard traversal uses Option+Tab to include links, consistent with macOS/Safari preferences. The 320px test covers a narrow reflow width; actual browser zoom and physical devices were not tested. These tests do not certify WCAG conformance. Axe leaves image-backed text/decorative symbols for manual contrast review; the current desktop/mobile screenshots and dark overlays were reviewed visually. The menu symbol's charcoal-on-warm-white contrast is 13.02:1.
 
-## Full-image hero revision
+## UX review fixes
 
-The homepage now uses an edge-to-edge image with overlaid text and actions. A stronger overlay on narrow screens preserves readability; the service summary remains below the hero. Desktop (1440px) and mobile (375px) viewport captures were visually reviewed. The hero has a minimum height and grows with its content to support text-spacing changes. Regression evidence below is refreshed for this revision.
+| Review finding | Current change |
+| --- | --- |
+| Hero and introduction repeat the same photo. | Introduction uses the existing alternative illustrative photo; the repeated photo-led approach section is removed. Actual NOK Care team photography still requires approved assets. |
+| Aged care and disability visitors have one generic route. | Separate aged care and disability/NDIS links lead to relevant service-page sections. Availability/funding are explicitly confirmed with the team. |
+| Mobile service preamble precedes its heading. | Main heading appears first, followed by pathways and featured services; “View all services” follows the list. |
+| Only service arrows are linked; wording is technical. | Each row has a single link encompassing its title, description and arrow. “Personal care” is a display label; its published category is retained in the content file. |
+| Repeated messaging adds length. | Shorter introduction and practical getting-started guidance replace repeated choice-focused copy. Service areas use a compact grid and mobile spacing is tighter. |
+| Service/FAQ text is small. | Featured descriptions, FAQ questions/answers and process copy are at least 16px; footer copyright increases to 12px. |
+| Closing button wraps on mobile. | Shared label is “Talk to our team”; actual mobile layout confirms a single line. |
+| Contact leads to a disabled preview form. | Preview is removed. Direct phone/email links and a short enquiry-preparation guide form the contact experience. Sensitive information must be arranged through a suitable secure channel. |
 
-## Defects corrected
+At 375px the homepage is **6,605px tall**, compared with 7,046px at the review: 441px shorter while adding distinct pathways and larger key text. Desktop length is 4,997px compared with 5,298px. Measurements are viewport/font specific, not a universal scroll-length target.
 
-| Finding | Correction | Verification |
-| --- | --- | --- |
-| Mobile Menu button was visible alongside desktop navigation. | Hide the toggle by default and show it below the existing mobile breakpoint. | All pages at 1000px and 1440px; mobile menu checks at smaller widths. |
-| Top contact strip was outside a semantic landmark. | Move the strip inside the existing header. | Landmark checks and axe audits. |
-| Escape did not close the expanded menu while focus remained on its toggle. | Handle Escape whenever the menu is expanded; return focus to the toggle. | Keyboard tests from the toggle and inside navigation. |
-| Malformed percent encoding in a URL fragment could throw an exception. | Safely ignore malformed fragments. | Browser test sets the fragment to `%` and checks for errors. |
-| About heading overflowed at 375px with increased text spacing. | Allow long heading words to wrap when needed. | Text-spacing checks on all pages in all available engines. |
+Actual click checks in `ux-journeys.json` verify both pathways, a Personal care title through to its service, and the service enquiry link through to phone/email contact. The contact button's mobile line length was also verified.
 
-The menu button now also declares `type="button"` explicitly. Static checks were strengthened to validate unique metadata, heading order, language, landmarks and stylesheet asset paths.
+## Technical defects already corrected
 
-## Content, forms and assets
+- Hide the mobile Menu toggle on desktop; declare its button type.
+- Keep the top contact strip inside the header landmark.
+- Close an expanded menu with Escape from the toggle or navigation and return focus.
+- Ignore malformed percent-encoded URL fragments safely.
+- Allow long heading words to wrap with increased text spacing.
+- Check generated pages against a fresh build and validate metadata, heading order, language, landmarks, links, image metadata and stylesheet asset paths.
 
-The phone numbers, email, service areas and address were compared against https://nokcare.com.au/. The website's published information remains the source, not independent verification of service availability or eligibility. The ten service categories were taken from the existing published services page during implementation; renewed automated access to that services page was unavailable in this review.
+## Content, privacy and launch dependencies
 
-No registration number, testimonial, statistics or qualification claims have been added. Confirm the spelling of “Huttson Street”, appointment arrangements, availability and funding eligibility with the business. Images are illustrative and must not be presented as actual staff or participants. Business approval of image rights/suitability remains outstanding. Local fonts include their open-source licences.
+Contact numbers, email, address and areas are based on https://nokcare.com.au/. Published service categories were reviewed from https://nokcare.com.au/services during implementation. These sources do not independently confirm current availability or funding eligibility. Confirm the address spelling “Huttson Street”, appointment arrangements and business details before public launch.
 
-The enquiry form is an explicitly disabled preview. This is intentional, not an operational enquiry service. Referral information is not collected. No application code uses localStorage, sessionStorage, analytics or form-network requests. A tracked-text scan for common GitHub token, AWS access key and private-key patterns found no matches; this limited scan is not a complete secrets audit of historical commits.
+No registration number, testimonial, statistics or qualification claims have been added. Images are illustrative and not represented as staff or clients. Image suitability/permissions and an approved complete privacy notice remain business acceptance items. No new claims about funding programs, response times or care outcomes were introduced.
 
-## Remaining handover / launch items
+Contact is intentionally phone/email-only. No online enquiry form, document upload, referral collection, analytics or browser storage is implemented. Any future online collection needs an approved secure backend, server validation, spam protection, access/retention rules and privacy review. Do not send health records or NDIS documents through ordinary email. A prior scan of tracked text found no common GitHub-token, AWS-access-key or private-key patterns; this was not an exhaustive historical secrets audit.
 
-| Priority | Item | Required outcome |
-| --- | --- | --- |
-| Before production acceptance | Enquiry and referral scope | Customer accepts phone/email-only general enquiries for launch, or approves a secure backend, server validation, spam protection, retention/access rules and referral workflow. Do not enable the preview form by removing disabled attributes. |
-| Before production acceptance | Business content and assets | Confirm services, address spelling, eligibility wording and image permissions. |
-| Before production acceptance | Privacy | Approve a complete privacy notice appropriate to the selected hosting and data-collection arrangements. Current text explains this build's limited functionality. |
-| Before production acceptance | Hosting | Select/enable hosting and repeat checks on the actual HTTPS URL, including nested asset paths, navigation, security headers and error pages. GitHub Pages was not published: the private repository is unsupported on the current plan and public-source approval has not been supplied. No repository visibility was changed by QA. |
-| With the final production domain | SEO | Set canonical URLs, sharing URLs/image and sitemap against the agreed domain; avoid pointing a review copy at an invented production origin. Unique titles, descriptions, language and Open Graph text already exist. |
-| Customer acceptance | Human/device checks | Review on a real iPhone and Android device, installed Safari/Chrome/Firefox, browser zoom and a screen reader (VoiceOver/NVDA). Confirm image crops, reading order and touch usability with the customer. |
+GitHub Pages is not published. The repository remains private; the plan does not support Pages for this private repository, and permission to expose the source publicly has not been supplied. After hosting is selected, repeat checks on the actual HTTPS URL, verify subdirectory asset paths and host security/error behavior, and configure canonical/share URLs and a sitemap for the agreed domain.
+
+Before production acceptance, complete real iPhone/Android and installed-browser checks, actual zoom checks, a screen-reader review (VoiceOver/NVDA), business content/image approval and customer sign-off. Current browser engines provide useful coverage but do not replace physical-device or assistive-technology testing.
 
 ## Reproduce
 
-The website remains dependency-free in production. The browser tools below are optional development tools installed outside the repository:
+The website remains dependency-free in production. Optional development tools can live outside the repository:
 
 ```sh
 python3 scripts/build.py
@@ -83,7 +79,7 @@ PLAYWRIGHT_BROWSERS_PATH=/tmp/nokcare-qa-browsers node /tmp/nokcare-qa-tools/nod
 python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-In another terminal, run once for each engine (`chromium`, `firefox`, `webkit`):
+In another terminal, run once per engine (`chromium`, `firefox`, `webkit`):
 
 ```sh
 PLAYWRIGHT_BROWSERS_PATH=/tmp/nokcare-qa-browsers \
@@ -94,14 +90,4 @@ QA_OUTPUT=/tmp/nokcare-qa-chromium \
 node scripts/qa-browser.cjs
 ```
 
-The runner exits nonzero for failed checks or an incomplete run. `QA_BASE_URL` can target the final hosted subdirectory (without a trailing slash). Stop the local HTTP server after testing. Upload only the five pages and their CSS, JS and asset folders to conventional hosting; QA tooling and source guidance are not production assets.
-
-## Icon list and introduction revision
-
-The three service labels below the hero now use a semantic list with decorative SVG icons. The following introduction uses an image on the left and content on the right at 700px and above, stacking on mobile. Existing wording and navigation are preserved. A shared icon-list component uses the brand tokens.
-
-This subsequent revision passed all **372 Chromium regression checks** across the same six viewport widths, including ten axe audits with no automated violations. Browser screenshots and element positions were also checked at 375px, 768px and 1440px to confirm stacking and column order. Firefox and WebKit results above describe the preceding full-image-hero baseline; they were not rerun for this small section change. Evidence: `introduction-chromium-results.json`.
-
-## Contact-panel photograph revision
-
-The shared charcoal contact panel now uses the existing local forest photograph beneath a dark gradient, with a stronger uniform overlay on mobile. This is decorative imagery; content and actions are unchanged. The four pages containing the panel (Home, About, Services, Referral) were checked in Chromium at 375px, 768px and 1440px: 12 panel checks passed, no horizontal overflow, no runtime/asset errors and no automated WCAG A/AA violations in the panel. Image-backed contrast was flagged for manual review and the desktop/mobile screenshots were visually reviewed. Evidence: `cta-overlay-results.json` and `screenshots/cta-overlay-*.png`. This was a scoped check, not a rerun of the full cross-browser baseline.
+The runner exits nonzero for failures or an incomplete run. `QA_BASE_URL` can target a hosted subdirectory without a trailing slash. Stop the local server after testing. Deploy only the five HTML pages and the CSS, JS and asset folders; source guidance, QA tooling and Git metadata are not production assets.

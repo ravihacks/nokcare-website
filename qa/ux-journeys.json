@@ -1,0 +1,27 @@
+[
+  {
+    "journey": "aged-care",
+    "passed": true
+  },
+  {
+    "journey": "disability-support",
+    "passed": true
+  },
+  {
+    "journey": "Personal care title opens service",
+    "passed": true
+  },
+  {
+    "journey": "Service enquiry reaches phone/email contact",
+    "passed": true
+  },
+  {
+    "journey": "Mobile page height",
+    "pixels": 6605,
+    "previous": 7046
+  },
+  {
+    "journey": "Short contact button stays on one line",
+    "passed": true
+  }
+]

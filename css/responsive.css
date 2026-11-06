@@ -1,4 +1,5 @@
 @media (min-width: 700px) {
+  .support-pathways { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; }
   .opening-footnote { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
   .introduction-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .introduction-image { height: 460px; }
@@ -39,11 +40,13 @@
   .home-services .editorial-row > div:first-child .text-link { margin-bottom: 1rem; }
 }
 @media (max-width: 699px) {
+  .introduction-image { height: auto; aspect-ratio: 3 / 2; }
+  .home-services .section-heading { margin-bottom: 1.5rem; }
   .cta { background-image: linear-gradient(var(--cta-scrim-strong), var(--cta-scrim-strong)), url('../assets/images/nature.jpg'); }
   .service-link-label { display: none; }
-  .service-card { grid-template-columns: 24px minmax(0, 1fr) 44px; gap: .65rem; }
+  .service-card { grid-template-columns: 24px minmax(0, 1fr); gap: .65rem; }
   .service-card h3 { font-size: 1.05rem; }
-  .service-card p { font-size: .95rem; }
+  .service-card p { font-size: 1rem; }
   .perspective-grid figure img { height: 340px; }
   .page-heading { gap: .25rem; }
   .page-heading .eyebrow { margin-bottom: 1rem; }

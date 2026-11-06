@@ -45,6 +45,11 @@ fs.mkdirSync(output, { recursive: true });
         check(`${label}: images load`, await page.evaluate(() => [...document.images].every(img => img.naturalWidth > 0)));
         check(`${label}: fonts load`, layout.fonts.every(Boolean));
         check(`${label}: one active navigation item`, await page.locator('#main-nav [aria-current="page"]').count() === 1);
+        if (file === 'index.html') {
+          check(`${label}: two support pathways`, await page.locator('.support-pathway a').count() === 2);
+          check(`${label}: every featured service has a linked title`, await page.locator('.service-card-link h3').count() === 3);
+          check(`${label}: no repeated hero/introduction image`, await page.locator('.opening-image img').getAttribute('src') !== await page.locator('.introduction-image').getAttribute('src'));
+        }
         const button = page.getByRole('button', { name: 'Menu' });
         check(`${label}: menu visibility`, await button.isVisible() === (width < 1000));
         if (width < 1000) {
@@ -65,7 +70,10 @@ fs.mkdirSync(output, { recursive: true });
           await page.keyboard.press('Space');
           check(`${label}: FAQ keyboard closes`, await detail.getAttribute('open') === null);
         }
-        if (file === 'contact.html') check(`${label}: form cannot accept data`, await page.locator('form input:enabled, form select:enabled, form textarea:enabled, form button:enabled').count() === 0);
+        if (file === 'contact.html') {
+          check(`${label}: finished contact page has no form preview`, await page.locator('form, input, textarea, select').count() === 0);
+          check(`${label}: direct contact channels exist`, await page.locator('.contact-detail a[href^="tel:"]').count() === 2 && await page.locator('.contact-detail a[href^="mailto:"]').count() === 1);
+        }
         if (file === 'referral.html') check(`${label}: no referral collection`, await page.locator('input, textarea, input[type="file"]').count() === 0);
         if (axePath && [375, 1440].includes(width)) {
           await page.addScriptTag({ path: axePath });

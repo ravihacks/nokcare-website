@@ -32,7 +32,8 @@
   {
     "id": "personal-care",
     "title": "Daily personal activities",
-    "description": "Respectful support with personal routines, mobility, meals and everyday wellbeing."
+    "description": "Respectful support with personal routines, mobility, meals and everyday wellbeing.",
+    "displayTitle": "Personal care"
   },
   {
     "id": "community",
