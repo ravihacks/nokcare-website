@@ -102,7 +102,7 @@ Sources and intended usage for the four new photographs are in `content/image-so
 Inner pages share brand tokens, typography, buttons and photographic treatment while using layouts suited to their purpose:
 
 - About uses an editorial masthead, one opening image, a concise story, a mission/vision band and a visual values grid.
-- Services uses a compact masthead and category jump links before its three illustrated groups. Plain service rows use spacing instead of divider lines or decorative numbers, with one subtle separator between groups. One photographic contact panel combines general support and aged-care guidance, preserving `#aged-care`. All ten service anchors and both homepage audience destinations remain available.
+- Services uses a compact masthead and category jump links before its three illustrated groups. Plain service descriptions use spacing instead of divider lines or decorative numbers, with one subtle separator between groups. Individual directory descriptions have no links or arrows; each group ends with one “Discuss these services” link. Homepage featured-service links remain unchanged. One photographic contact panel combines general support and aged-care guidance, preserving `#aged-care`. All ten service anchors and both homepage audience destinations remain available.
 - Contact uses a compact masthead, immediate phone/email actions and the form before supporting information in mobile/source order.
 - Referral uses the same task layout with concise guidance, referral-specific FAQs and a closing telephone action that stays in the referral journey.
 

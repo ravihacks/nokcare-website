@@ -149,3 +149,6 @@
 .service-grid--plain .service-card { grid-template-columns: minmax(0, 1fr); border-bottom: 0; padding-block: 1.5rem; }
 .page-services .service-group:first-of-type { border-top: 0; }
 .cta-services p { max-width: 580px; margin: 1.25rem 0 0; color: var(--warm); font-size: 1rem; }
+
+.service-group-content { min-width: 0; }
+.service-group-discuss { margin-top: .75rem; }

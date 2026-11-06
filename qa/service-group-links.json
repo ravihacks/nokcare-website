@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "width": 320,
+      "overflow": false,
+      "serviceCount": 10,
+      "individualServiceLinks": 0,
+      "serviceArrows": 0,
+      "groupContactLinks": 3,
+      "decorativeNumbers": 0,
+      "rowDividers": false,
+      "listTopBorders": false,
+      "closingPanels": 1,
+      "agedCareTarget": true,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 320,
+      "agedCareLinkResolves": true
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "serviceCount": 10,
+      "individualServiceLinks": 0,
+      "serviceArrows": 0,
+      "groupContactLinks": 3,
+      "decorativeNumbers": 0,
+      "rowDividers": false,
+      "listTopBorders": false,
+      "closingPanels": 1,
+      "agedCareTarget": true,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 375,
+      "agedCareLinkResolves": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "serviceCount": 10,
+      "individualServiceLinks": 0,
+      "serviceArrows": 0,
+      "groupContactLinks": 3,
+      "decorativeNumbers": 0,
+      "rowDividers": false,
+      "listTopBorders": false,
+      "closingPanels": 1,
+      "agedCareTarget": true,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 768,
+      "agedCareLinkResolves": true
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "serviceCount": 10,
+      "individualServiceLinks": 0,
+      "serviceArrows": 0,
+      "groupContactLinks": 3,
+      "decorativeNumbers": 0,
+      "rowDividers": false,
+      "listTopBorders": false,
+      "closingPanels": 1,
+      "agedCareTarget": true,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "width": 1440,
+      "agedCareLinkResolves": true
+    }
+  ],
+  "errors": []
+}

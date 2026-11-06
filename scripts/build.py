@@ -18,11 +18,13 @@ def render(text, values):
 def service_cards(items, on_services=False):
     rows = []
     for number, item in enumerate(items, 1):
-        target = 'contact.html' if on_services else 'services.html#' + item['id']
-        label = 'Ask about this service' if on_services else 'Read about this service'
         title = escape(item.get('displayTitle', item['title']))
-        number_label = '' if on_services else f'<span class="number" aria-hidden="true">{number:02d}</span>'
-        rows.append(f'<article class="service-card" id="{escape(item["id"])}">{number_label}<a class="service-card-link" href="{target}" aria-label="{label}: {title}"><div class="service-copy"><h3>{title}</h3><p>{escape(item["description"])}</p></div><span class="service-card-action"><span class="service-link-label">{label}</span><span class="service-arrow" aria-hidden="true">↗</span></span></a></article>')
+        if on_services:
+            rows.append(f'<article class="service-card" id="{escape(item["id"])}"><div class="service-copy"><h3>{title}</h3><p>{escape(item["description"])}</p></div></article>')
+        else:
+            target = 'services.html#' + item['id']
+            label = 'Read about this service'
+            rows.append(f'<article class="service-card" id="{escape(item["id"])}"><span class="number" aria-hidden="true">{number:02d}</span><a class="service-card-link" href="{target}" aria-label="{label}: {title}"><div class="service-copy"><h3>{title}</h3><p>{escape(item["description"])}</p></div><span class="service-card-action"><span class="service-link-label">{label}</span><span class="service-arrow" aria-hidden="true">↗</span></span></a></article>')
 
     grid_class = 'service-grid service-grid--plain' if on_services else 'service-grid'
     return '<div class="' + grid_class + '">' + ''.join(rows) + '</div>'
@@ -33,7 +35,7 @@ values['areas'] = '<div class="pills">' + ''.join('<span class="pill">' + escape
 service_lookup = {item['id']: item for item in services}
 groups = json.loads((ROOT / 'content/service-groups.json').read_text())
 values['all_services'] = ''.join(
-    '<section class="service-group" id="' + escape(group['id']) + '"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div>' + service_cards([service_lookup[key] for key in group['services']], True) + '</section>'
+    '<section class="service-group" id="' + escape(group['id']) + '"><div class="service-group-intro"><h2>' + escape(group['title']) + '</h2><p>' + escape(group['description']) + '</p><img class="service-group-photo" src="assets/images/' + escape(group['image']) + '" alt="' + escape(group['alt']) + '" width="' + str(group['width']) + '" height="' + str(group['height']) + '" loading="lazy"></div><div class="service-group-content">' + service_cards([service_lookup[key] for key in group['services']], True) + '<a class="text-link service-group-discuss" href="contact.html" aria-label="Discuss these services: ' + escape(group['title']) + '">Discuss these services</a></div></section>'
     for group in groups)
 form_settings = json.loads((ROOT / 'content/forms.json').read_text())
 if form_settings['mode'] != 'preview' or form_settings['endpoint'] is not None or form_settings['participantDataEnabled']:
