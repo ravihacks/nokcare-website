@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "file": "index",
+      "width": 320,
+      "overflow": false,
+      "panels": 1,
+      "groupLinks": 0,
+      "individualServiceLinks": 0,
+      "phone": "tel:0466779972",
+      "action": "contact.html",
+      "agedCareTarget": false,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "file": "index",
+      "width": 375,
+      "overflow": false,
+      "panels": 1,
+      "groupLinks": 0,
+      "individualServiceLinks": 0,
+      "phone": "tel:0466779972",
+      "action": "contact.html",
+      "agedCareTarget": false,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "file": "index",
+      "width": 768,
+      "overflow": false,
+      "panels": 1,
+      "groupLinks": 0,
+      "individualServiceLinks": 0,
+      "phone": "tel:0466779972",
+      "action": "contact.html",
+      "agedCareTarget": false,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    },
+    {
+      "file": "index",
+      "width": 1440,
+      "overflow": false,
+      "panels": 1,
+      "groupLinks": 0,
+      "individualServiceLinks": 0,
+      "phone": "tel:0466779972",
+      "action": "contact.html",
+      "agedCareTarget": false,
+      "violations": [],
+      "manual": [
+        "color-contrast"
+      ]
+    }
+  ],
+  "errors": []
+}

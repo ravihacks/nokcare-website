@@ -1,4 +1,9 @@
 {
+  "index": {
+    "description": "Talk to us about support at home, in your community or with your NDIS plan. We can discuss your needs, preferences and available services.",
+    "label": "Discuss your support",
+    "target": "contact.html"
+  },
   "about": {
     "description": "Talk to us about the support you are looking for. We can discuss your needs, preferences and available services.",
     "label": "Discuss your support",
