@@ -1,6 +1,7 @@
-import { setupNavigation } from './components.js';
+import { setupNavigation, setupEnquiryPreviews } from './components.js';
 document.documentElement.classList.add('js');
 setupNavigation();
+setupEnquiryPreviews();
 
 // Progressive enhancement: content remains readable if observers are unsupported.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');

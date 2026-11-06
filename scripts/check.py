@@ -70,5 +70,9 @@ for stylesheet in (ROOT / 'css').glob('*.css'):
         assert not urlsplit(url).scheme and (stylesheet.parent / url).is_file(), (stylesheet, url)
 for script in (ROOT / 'js').glob('*.js'):
     assert not any(term in script.read_text() for term in ['localStorage', 'sessionStorage', 'fetch(']), script
-assert json.loads((ROOT / 'content/site.json').read_text())['contactFormEndpoint'] is None
+forms = json.loads((ROOT / 'content/forms.json').read_text())
+assert forms['mode'] == 'preview' and forms['endpoint'] is None and forms['participantDataEnabled'] is False
+services = json.loads((ROOT / 'content/services.json').read_text())
+groups = json.loads((ROOT / 'content/service-groups.json').read_text())
+assert sorted(item['id'] for item in services) == sorted(key for group in groups for key in group['services']), 'Services must appear exactly once in the directory groups'
 print('PASS: five pages; metadata and heading hierarchy; semantic landmarks; local links/fragments; image metadata; field labels; CSS assets; no unresolved placeholders, browser storage or form-network code.')

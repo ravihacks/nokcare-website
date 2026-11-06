@@ -8,7 +8,9 @@ Five static HTML pages using CSS and vanilla JavaScript. No framework, package i
 - `templates/`: editable page HTML and editorial content.
 - `components/`: shared header and footer partials.
 - `content/site.json`: contact information, service areas and launch review items.
-- `content/pages.json`: page titles, descriptions and introductory content.
+- `content/pages.json`: titles, descriptions, introductory content and inner-page hero photography.
+- `content/forms.json`: shared form copy and preview settings.
+- `content/service-groups.json`: illustrated service-directory groups; categories remain in `services.json`.
 - `content/services.json`, `content/values.json`: reusable content collections. Optional `displayTitle` supplies a plain-English service label while preserving its published category title.
 - `css/brand.css`: palette, type, spacing and radius tokens; local font declarations.
 - `css/global.css`: reset, typography and accessibility foundations.
@@ -44,13 +46,16 @@ python3 -m http.server 8000
 
 Visit `http://localhost:8000`. Stop with Ctrl-C. Static checks validate links, fragments, unique IDs, page landmarks, H1 counts, image dimensions/alt attributes, field labels and placeholder resolution. They do not certify WCAG conformance.
 
-Handover QA has now run in Chromium, Firefox and WebKit at six widths from 320px to 1440px: 1,188 checks passed, with no automated accessibility violations. See [the QA report](qa/HANDOVER_QA.md) for evidence, corrected defects, reproduction steps and outstanding acceptance items. Real-device, installed-browser, screen-reader and actual browser-zoom testing remain customer acceptance tasks.
+Handover QA has now run in Chromium, Firefox and WebKit at six widths from 320px to 1440px: 1,362 checks passed, with no automated accessibility violations. See [the QA report](qa/HANDOVER_QA.md) for evidence, corrected defects, reproduction steps and outstanding acceptance items. Real-device, installed-browser, screen-reader and actual browser-zoom testing remain customer acceptance tasks.
 
 ## Contact and referrals
 
-Contact is a finished phone/email-only page with direct links, location information and a short guide to making a general enquiry. The disabled form preview has been removed. `contactFormEndpoint` is null and intentionally not wired into scripts. Online referrals, uploads, analytics and browser storage are absent.
+Contact and Referral now share `components/enquiry-form.html`. Form copy and preview configuration are in `content/forms.json`. Both forms are **preview-only**: fields validate locally, the button reviews their completeness and explicitly says nothing was sent. A submit guard is installed before fields are enabled; controls remain disabled without JavaScript. There is no endpoint, fetch, browser storage, file upload or success simulation.
 
-Before adding online enquiry forms, select an approved secure backend and implement server validation, rate limiting/spam protection, access controls, retention rules, error/success handling and an approved privacy notice. Do not collect sensitive information through a mailto form. Review field names and consent requirements with the chosen integration. Referral collection needs a separately reviewed secure workflow; never use localStorage, public files or general email for participant records.
+The Contact form accepts general questions. The Referral contact form accepts only the enquirer’s contact information and relationship; it has no participant name, NDIS number, health field, notes box or upload. Direct phone/email contact remains available. Do not enter real sensitive information into previews.
+
+`mode` is `preview`, `endpoint` is null and `participantDataEnabled` is false. The builder intentionally rejects live-mode or participant-collection settings until the integration is implemented. Changing a URL alone does not activate these forms. Before live submission, choose an approved secure backend; implement server validation, spam protection, access and retention controls, real status handling, an approved privacy notice and relevant consent requirements. Add the secure referral workflow separately. Never send participant records through a mailto form.
+
 
 ## Sources and launch review
 
@@ -84,10 +89,14 @@ Edit the homepage composition in `templates/index.html` and the other page templ
 
 Photography is illustrative, not presented as NOK Care staff, clients or facilities. The main photo is reused from the existing NOK Care website. The editorial homepage photo is https://images.unsplash.com/photo-1511632765486-a01980e01a18 (`family-connection.jpg`). The decorative contact-panel background is `nature.jpg` (https://images.unsplash.com/photo-1441974231531-c6227db76b6e). The previously downloaded `everyday-support.jpg` (https://images.unsplash.com/photo-1544027993-37dbfe43562a) remains unused. Confirm permissions before launch.
 
-Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Handover QA additionally passed 1,188 checks in Chromium, Firefox and WebKit; see `qa/HANDOVER_QA.md`. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.
+Validation: generated all five pages and passed static page/link checks, JavaScript syntax checks and Git whitespace checks. Handover QA additionally passed 1,362 checks in Chromium, Firefox and WebKit; see `qa/HANDOVER_QA.md`. Approved team and local photography remain the strongest opportunity to make the imagery specific to NOK Care.
 
 ## Homepage photography
 
 The service pathways, getting-started guidance and service-area section now include photographs to break up long text sections. All new images are optimised JPEGs and lazy-loaded with explicit dimensions. Pathway images share the existing title link through a stretched-link target; keyboard navigation keeps one link per pathway. The FAQ remains a simple text accordion for readability.
 
 Sources and intended usage for the four new photographs are in `content/image-sources.json`. They illustrate companionship, social connection, discussion and Melbourne; they are not presented as NOK Care clients, staff, facilities or a specific office location. The conversation photograph was already used on NOK Care’s existing services page. Confirm rights/suitability with the customer alongside the other image assets.
+
+## Inner-page design consistency
+
+About, Services, Contact and Referral use the same photo-led masthead, type scale, rounded imagery, gold details and shared contact panel. Services are grouped into three illustrated sections while keeping all ten original service anchors. About pairs its existing values and purpose with supporting imagery. Contact and Referral use matching form panels and an image-supported introduction. No new images or business claims were required for this pass.

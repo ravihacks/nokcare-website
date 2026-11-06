@@ -1,0 +1,19 @@
+<div class="form-panel" id="{{form_id}}-panel">
+  <span class="eyebrow">Get in touch</span><h2>{{form_title}}</h2><p>{{form_intro}}</p>
+  <p class="notice" id="{{form_id}}-notice">{{form_notice}}</p>
+  <form data-enquiry-preview data-form-mode="preview" data-preview-status="{{form_status}}" method="post" autocomplete="off" aria-labelledby="{{form_id}}-heading" aria-describedby="{{form_id}}-notice">
+    <fieldset disabled><legend id="{{form_id}}-heading">Your contact details</legend>
+      <div class="form-grid">
+        <div class="full"><label for="{{form_id}}-name">Your name <span class="required-label">(required)</span></label><input id="{{form_id}}-name" name="full_name" autocomplete="off" required maxlength="100"></div>
+        <div><label for="{{form_id}}-email">Email <span class="required-label">(required)</span></label><input id="{{form_id}}-email" name="email" type="email" autocomplete="off" required maxlength="254"></div>
+        <div><label for="{{form_id}}-phone">Phone <span class="optional-label">(optional)</span></label><input id="{{form_id}}-phone" name="phone" type="tel" autocomplete="off" maxlength="25"></div>
+        <div class="full"><label for="{{form_id}}-topic">{{form_topic_label}}</label><select id="{{form_id}}-topic" name="topic"><option value="">Please choose</option>{{form_options}}</select></div>
+        {{form_message}}
+        <div class="full"><label class="checkbox-label" for="{{form_id}}-consent"><input id="{{form_id}}-consent" name="contact_permission" type="checkbox" required><span>I agree to be contacted about this enquiry. <span class="required-label">(required)</span></span></label></div>
+        <div class="full"><p class="form-note">Read <a href="contact.html#privacy">how to handle your information</a> before sharing details.</p><button class="button" type="button" data-review-enquiry>{{form_button}} <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </fieldset>
+    <p class="form-status" role="status" aria-live="polite" data-preview-message></p>
+    <noscript><p class="notice">This form preview needs JavaScript. Please use the phone or email details on this page.</p></noscript>
+  </form>
+</div>

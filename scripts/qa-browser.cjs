@@ -21,6 +21,7 @@ fs.mkdirSync(output, { recursive: true });
       const page = await context.newPage();
       page.on('pageerror', e => results.errors.push(`${width}: ${e.message}`));
       page.on('console', msg => { if (msg.type() === 'error') results.errors.push(`${width}: ${msg.text()}`); });
+      page.on('request', request => { if (request.method() !== 'GET') results.errors.push(`Unexpected ${request.method()} request: ${request.url()}`); });
       page.on('response', response => { if (response.status() >= 400) results.errors.push(`${response.status()} ${response.url()}`); });
       for (const file of pages) {
         const label = `${file} at ${width}px`;
@@ -70,11 +71,28 @@ fs.mkdirSync(output, { recursive: true });
           await page.keyboard.press('Space');
           check(`${label}: FAQ keyboard closes`, await detail.getAttribute('open') === null);
         }
-        if (file === 'contact.html') {
-          check(`${label}: finished contact page has no form preview`, await page.locator('form, input, textarea, select').count() === 0);
-          check(`${label}: direct contact channels exist`, await page.locator('.contact-detail a[href^="tel:"]').count() === 2 && await page.locator('.contact-detail a[href^="mailto:"]').count() === 1);
+        if (['contact.html', 'referral.html'].includes(file)) {
+          const form = page.locator('[data-enquiry-preview]');
+          check(`${label}: one clearly labelled preview form`, await form.count() === 1 && await form.getAttribute('data-form-mode') === 'preview');
+          check(`${label}: required fields validate`, !(await form.evaluate(el => el.checkValidity())));
+          await form.locator('[name="full_name"]').fill('QA Example');
+          await form.locator('[name="email"]').fill('invalid-email');
+          await form.locator('[data-review-enquiry]').click();
+          check(`${label}: invalid email rejected`, !(await form.locator('[name="email"]').evaluate(el => el.checkValidity())));
+          await form.locator('[name="email"]').fill('qa@example.test');
+          await form.locator('[name="phone"]').fill('0400 000 000');
+          if (file === 'contact.html') await form.locator('textarea').fill('General service availability question for a QA check.');
+          await form.locator('[name="contact_permission"]').check();
+          await form.locator('[data-review-enquiry]').click();
+          check(`${label}: review is honest about no sending`, (await form.locator('[data-preview-message]').textContent()).includes('not sent'));
+          const urlBeforeSubmit = page.url();
+          await form.evaluate(el => el.requestSubmit());
+          await page.waitForTimeout(100);
+          check(`${label}: submission is prevented`, page.url() === urlBeforeSubmit);
+          await form.evaluate(el => { el.reset(); el.querySelector('[data-preview-message]').textContent = ''; });
+          if (file === 'contact.html') check(`${label}: direct contact channels exist`, await page.locator('.contact-detail a[href^="tel:"]').count() === 2 && await page.locator('.contact-detail a[href^="mailto:"]').count() === 1);
+          if (file === 'referral.html') check(`${label}: no participant records requested`, await form.locator('textarea, input[type="file"], input[name*="participant"], input[name*="ndis"]').count() === 0);
         }
-        if (file === 'referral.html') check(`${label}: no referral collection`, await page.locator('input, textarea, input[type="file"]').count() === 0);
         if (axePath && [375, 1440].includes(width)) {
           await page.addScriptTag({ path: axePath });
           const audit = await page.evaluate(async () => {
@@ -97,6 +115,11 @@ fs.mkdirSync(output, { recursive: true });
     await nojsPage.goto(`${base}/index.html`);
     check('No JavaScript: navigation remains visible', await nojsPage.locator('#main-nav').isVisible());
     check('No JavaScript: no page overflow', await nojsPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    for (const file of ['contact.html', 'referral.html']) {
+      await nojsPage.goto(`${base}/${file}`);
+      check(`${file} without JavaScript: fields stay disabled`, await nojsPage.locator('form input:enabled, form select:enabled, form textarea:enabled').count() === 0);
+      check(`${file} without JavaScript: review stays disabled`, await nojsPage.locator('[data-review-enquiry]').isDisabled());
+    }
     await nojs.close();
     const spacingPage = await browser.newPage({ viewport: { width: 375, height: 900 }, reducedMotion: 'reduce' });
     for (const file of pages) {

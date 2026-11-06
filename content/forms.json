@@ -1,0 +1,31 @@
+{
+  "mode": "preview",
+  "endpoint": null,
+  "participantDataEnabled": false,
+  "contact": {
+    "title": "General enquiry",
+    "intro": "Ask about services, availability or getting started. General enquiries only.",
+    "notice": "Form preview: sending is not connected yet. Please call or email for enquiries. Do not enter health information, NDIS numbers or participant records.",
+    "status": "Your details have been checked. This preview has not sent anything. Please call or email the team to make your enquiry.",
+    "button": "Review enquiry",
+    "options": [
+      "Aged care support",
+      "Disability & NDIS support",
+      "Services and availability",
+      "Other general enquiry"
+    ]
+  },
+  "referral": {
+    "title": "Referral contact enquiry",
+    "intro": "For the person making the enquiry. Participant information will be arranged separately through a suitable secure channel.",
+    "notice": "Form preview: sending is not connected yet. Use your own contact details only. Do not enter participant names, NDIS numbers, health information or documents.",
+    "status": "Your contact details have been checked. This preview has not sent a referral. Please call the team to discuss a secure next step.",
+    "button": "Review contact details",
+    "options": [
+      "I am enquiring for myself",
+      "Family member or carer",
+      "Support coordinator",
+      "Other professional"
+    ]
+  }
+}

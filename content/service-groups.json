@@ -1,0 +1,42 @@
+[
+  {
+    "title": "At home & everyday life",
+    "description": "Practical support with routines, personal activities and independent living.",
+    "image": "aged-care-companionship.jpg",
+    "alt": "An older couple sharing a hug outdoors",
+    "width": 900,
+    "height": 1350,
+    "services": [
+      "personal-care",
+      "daily-living",
+      "household",
+      "sil"
+    ]
+  },
+  {
+    "title": "Out in your community",
+    "description": "Explore connection, travel, activities, work and study support.",
+    "image": "community-connections.jpg",
+    "alt": "Friends sitting together outdoors",
+    "width": 900,
+    "height": 506,
+    "services": [
+      "community",
+      "innovative-community",
+      "transport",
+      "employment"
+    ]
+  },
+  {
+    "title": "Your plan & support network",
+    "description": "Explore help with plan administration and connecting services.",
+    "image": "planning-together.jpg",
+    "alt": "People discussing ideas around a table",
+    "width": 1100,
+    "height": 733,
+    "services": [
+      "plan-management",
+      "coordination"
+    ]
+  }
+]

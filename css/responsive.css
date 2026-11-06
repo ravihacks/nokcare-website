@@ -1,4 +1,6 @@
 @media (min-width: 700px) {
+  .page-heading--image { grid-template-columns: 1.1fr 1fr; }
+  .page-heading-image { height: 350px; }
   .getting-started-grid, .local-feature { grid-template-columns: 1fr 1fr; gap: 3rem; }
   .getting-started-visual img { height: 520px; }
   .local-photo img { height: 480px; }
@@ -17,6 +19,10 @@
   .local-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
 }
 @media (min-width: 1000px) {
+  .page-heading.page-heading--image { grid-template-columns: 1.1fr 1fr; gap: 4rem; }
+  .page-heading-image { height: 390px; }
+  .service-group { grid-template-columns: .85fr 1.4fr; gap: 4rem; }
+  .service-group-photo { height: 320px; }
   .getting-started-grid, .local-feature { gap: 5rem; }
   .introduction-grid { gap: 5rem; }
   .introduction-image { height: 480px; }
@@ -60,6 +66,8 @@
   .page-heading .eyebrow { margin-bottom: 1rem; }
 }
 @media (max-width: 480px) {
+  .page-heading-image { height: 230px; }
+  .form-panel [data-review-enquiry] { width: 100%; }
   .container { width: calc(100% - 2.5rem); }
   .utility span { display: none; }
   .utility .container { justify-content: center; }
